@@ -20,11 +20,6 @@ config.local.js
 .env
 .env.local
 
-# Archivos grandes (opcional, si quieres versionar)
-*.mp3
-*.wav
-*.mp4
-
 # Scripts de PowerShell (mantenimiento local)
 *.ps1
 
