@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Andrés Avelino Cáceres — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Andrés Avelino Cáceres</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-naranja">
+            <h2 class="titulo-heroe">Andrés Avelino Cáceres</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/HJw-tZDfrC4?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-caceres">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Qué seudónimo le impusieron a Cáceres?</p>
+                    <label><input type="radio" name="caceres-p1" value="a"> Caballero de los Mares</label>
+                    <label><input type="radio" name="caceres-p1" value="b"> Brujo de los Andes</label>
+                    <label><input type="radio" name="caceres-p1" value="c"> Faraón de la Sierra</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Dónde organizó su resistencia?</p>
+                    <label><input type="radio" name="caceres-p2" value="a"> Costa Norte</label>
+                    <label><input type="radio" name="caceres-p2" value="b"> Sierra Central</label>
+                    <label><input type="radio" name="caceres-p2" value="c"> Valles de la selva</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Quién formaba su contingente?</p>
+                    <label><input type="radio" name="caceres-p3" value="a"> Mercenarios europeos</label>
+                    <label><input type="radio" name="caceres-p3" value="b"> Campesinos e indígenas</label>
+                    <label><input type="radio" name="caceres-p3" value="c"> Marineros desembarcados</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Por qué se le llamó Brujo?</p>
+                    <label><input type="radio" name="caceres-p4" value="a"> Hacía magia teatral</label>
+                    <label><input type="radio" name="caceres-p4" value="b"> Se movía como desapareciendo en los cerros</label>
+                    <label><input type="radio" name="caceres-p4" value="c"> Conocía plantas medicinales</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué engaño táctico usó con llamas?</p>
+                    <label><input type="radio" name="caceres-p5" value="a"> Soltarlas cuesta abajo</label>
+                    <label><input type="radio" name="caceres-p5" value="b"> Simular un ejército grande</label>
+                    <label><input type="radio" name="caceres-p5" value="c"> Jalar cañones</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué idioma hablaba con sus soldados?</p>
+                    <label><input type="radio" name="caceres-p6" value="a"> Quechua ayacuchano</label>
+                    <label><input type="radio" name="caceres-p6" value="b"> Aimara</label>
+                    <label><input type="radio" name="caceres-p6" value="c"> Mochica</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué batalla ganó en julio de 1882?</p>
+                    <label><input type="radio" name="caceres-p7" value="a"> San Juan y Chorrillos</label>
+                    <label><input type="radio" name="caceres-p7" value="b"> Marcavalle y Pucará</label>
+                    <label><input type="radio" name="caceres-p7" value="c"> Asalto al Morro de Arica</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué cargo político ejerció luego?</p>
+                    <label><input type="radio" name="caceres-p8" value="a"> Alcalde de Lima</label>
+                    <label><input type="radio" name="caceres-p8" value="b"> Presidente de la República</label>
+                    <label><input type="radio" name="caceres-p8" value="c"> Presidente del Poder Judicial</label>
+                </div>
+                <div class="pregunta"><p>9. ¿De qué departamento era?</p>
+                    <label><input type="radio" name="caceres-p9" value="a"> Ayacucho</label>
+                    <label><input type="radio" name="caceres-p9" value="b"> Junín</label>
+                    <label><input type="radio" name="caceres-p9" value="c"> Pasco</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué enseñanza deja?</p>
+                    <label><input type="radio" name="caceres-p10" value="a"> Resistir sin rendirse</label>
+                    <label><input type="radio" name="caceres-p10" value="b"> Rendirse rápidamente</label>
+                    <label><input type="radio" name="caceres-p10" value="c"> Imposible sin armamento moderno</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-caceres', ['b','b','b','b','b','a','b','b','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page11.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page13.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

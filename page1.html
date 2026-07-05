@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Miguel Grau - Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Miguel Grau</h1>
+        <p><a href="index.html">« Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="seccion-heroe seccion-morado">
+            <h2 class="titulo-heroe">Miguel Grau - Caballero de los Mares</h2>
+            <div class="contenido-video fullscreen">
+                <iframe src="https://www.youtube.com/embed/IJ0znshTaKM?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-grau">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                <div class="grid-preguntas">
+                    <div class="pregunta"><p>1. ¿Con qué famoso pseudónimo se conoce históricamente a Miguel Grau?</p>
+                        <label><input type="radio" name="grau-p1" value="a"> El Brujo de los Andes</label>
+                        <label><input type="radio" name="grau-p1" value="b"> El Caballero de los Mares</label>
+                        <label><input type="radio" name="grau-p1" value="c"> El Soldado de la Ley</label>
+                    </div>
+                    <div class="pregunta"><p>2. ¿Cuál era el nombre del emblemático monitor que comandaba Miguel Grau?</p>
+                        <label><input type="radio" name="grau-p2" value="a"> Independencia</label>
+                        <label><input type="radio" name="grau-p2" value="b"> Huáscar</label>
+                        <label><input type="radio" name="grau-p2" value="c"> Unión</label>
+                    </div>
+                    <div class="pregunta"><p>3. ¿En qué gran conflicto internacional del siglo XIX participó Miguel Grau?</p>
+                        <label><input type="radio" name="grau-p3" value="a"> Combate del 2 de Mayo</label>
+                        <label><input type="radio" name="grau-p3" value="b"> Guerra del Pacífico</label>
+                        <label><input type="radio" name="grau-p3" value="c"> Guerra de la Independencia</label>
+                    </div>
+                    <div class="pregunta"><p>4. ¿Cuál fue la ciudad natal de Miguel Grau?</p>
+                        <label><input type="radio" name="grau-p4" value="a"> Piura</label>
+                        <label><input type="radio" name="grau-p4" value="b"> Lima</label>
+                        <label><input type="radio" name="grau-p4" value="c"> Arequipa</label>
+                    </div>
+                    <div class="pregunta"><p>5. ¿Qué noble acción humanitaria tras el hundimiento de la nave chilena Esmeralda le valió su legendario apodo?</p>
+                        <label><input type="radio" name="grau-p5" value="a"> Devolver el buque enemigo intacto</label>
+                        <label><input type="radio" name="grau-p5" value="b"> Rescatar a los marinos sobrevivientes y escribir una carta de condolencias a la viuda del capitán Prat</label>
+                        <label><input type="radio" name="grau-p5" value="c"> Firmar un armisticio inmediato</label>
+                    </div>
+                    <div class="pregunta"><p>6. ¿Quién fue la esposa de Miguel Grau a quien dirigió sus más conmovedoras cartas desde el frente?</p>
+                        <label><input type="radio" name="grau-p6" value="a"> Mercedes Cabello</label>
+                        <label><input type="radio" name="grau-p6" value="b"> Dolores Cabero</label>
+                        <label><input type="radio" name="grau-p6" value="c"> Micaela Bastidas</label>
+                    </div>
+                    <div class="pregunta"><p>7. ¿En qué histórico enfrentamiento naval entregó su vida Miguel Grau por defender al Perú?</p>
+                        <label><input type="radio" name="grau-p7" value="a"> Combate de Iquique</label>
+                        <label><input type="radio" name="grau-p7" value="b"> Combate de Angamos</label>
+                        <label><input type="radio" name="grau-p7" value="c"> Combate de Abtao</label>
+                    </div>
+                    <div class="pregunta"><p>8. ¿Qué rango militar ostentaba Grau en el momento de su sacrificio en el monitor?</p>
+                        <label><input type="radio" name="grau-p8" value="a"> Capitán de Navío (ascendido luego a Almirante)</label>
+                        <label><input type="radio" name="grau-p8" value="b"> General de Brigada</label>
+                        <label><input type="radio" name="grau-p8" value="c"> Coronel de Infantería</label>
+                    </div>
+                    <div class="pregunta"><p>9. ¿Cuál de los siguientes valores define de mejor manera el legado de Miguel Grau?</p>
+                        <label><input type="radio" name="grau-p9" value="a"> La ambición territorial</label>
+                        <label><input type="radio" name="grau-p9" value="b"> La caballerosidad, el desprendimiento y el profundo patriotismo</label>
+                        <label><input type="radio" name="grau-p9" value="c"> El desprecio por el adversario</label>
+                    </div>
+                    <div class="pregunta"><p>10. ¿En qué año ocurrió el Combate de Angamos donde Grau ascendió a la inmortalidad?</p>
+                        <label><input type="radio" name="grau-p10" value="a"> 1821</label>
+                        <label><input type="radio" name="grau-p10" value="b"> 1866</label>
+                        <label><input type="radio" name="grau-p10" value="c"> 1879</label>
+                    </div>
+                </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-grau', ['b','b','b','a','b','b','b','a','b','c'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+
+        <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('index.html', event)" class="btn-comprobar">« Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page2.html" class="btn-comprobar">Siguiente »</a>
+        </nav>
+    </main>
+
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

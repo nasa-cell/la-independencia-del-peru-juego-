@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>El Himno Nacional - Parte I — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>El Himno Nacional - Parte I</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-amarillo">
+            <h2 class="titulo-heroe">El Himno Nacional - Parte I</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/7NopxKgBtM8?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-himno1">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Quién compuso las notas del Himno Nacional?</p>
+                    <label><input type="radio" name="himno1-p1" value="a"> José de la Torre Ugarte</label>
+                    <label><input type="radio" name="himno1-p1" value="b"> José Bernardo Alcedo</label>
+                    <label><input type="radio" name="himno1-p1" value="c"> Claudio Rebagliati</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Quién escribió la letra original?</p>
+                    <label><input type="radio" name="himno1-p2" value="a"> José de la Torre Ugarte</label>
+                    <label><input type="radio" name="himno1-p2" value="b"> Ricardo Palma</label>
+                    <label><input type="radio" name="himno1-p2" value="c"> Abraham Valdelomar</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Quién cantó por primera vez el himno en 1821?</p>
+                    <label><input type="radio" name="himno1-p3" value="a"> Rosa Merino</label>
+                    <label><input type="radio" name="himno1-p3" value="b"> Clorinda Matto</label>
+                    <label><input type="radio" name="himno1-p3" value="c"> Micaela Villegas</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Cómo se eligió el himno?</p>
+                    <label><input type="radio" name="himno1-p4" value="a"> Decreto real</label>
+                    <label><input type="radio" name="himno1-p4" value="b"> Concurso público convocado por San Martín</label>
+                    <label><input type="radio" name="himno1-p4" value="c"> Votación popular</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Dónde se estrenó?</p>
+                    <label><input type="radio" name="himno1-p5" value="a"> Iglesia Catedral</label>
+                    <label><input type="radio" name="himno1-p5" value="b"> Teatro Principal</label>
+                    <label><input type="radio" name="himno1-p5" value="c"> Patio de San Marcos</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué coro abre el himno?</p>
+                    <label><input type="radio" name="himno1-p6" value="a"> "Somos libres..."</label>
+                    <label><input type="radio" name="himno1-p6" value="b"> "Largo tiempo..."</label>
+                    <label><input type="radio" name="himno1-p6" value="c"> "En su cima..."</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué transmite el himno?</p>
+                    <label><input type="radio" name="himno1-p7" value="a"> Deseo de dominación</label>
+                    <label><input type="radio" name="himno1-p7" value="b"> Amor a la libertad y justicia</label>
+                    <label><input type="radio" name="himno1-p7" value="c"> Nostalgia colonial</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Cuántas estrofas oficiales tiene?</p>
+                    <label><input type="radio" name="himno1-p8" value="a"> Cuatro</label>
+                    <label><input type="radio" name="himno1-p8" value="b"> Siete</label>
+                    <label><input type="radio" name="himno1-p8" value="c"> Diez</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Cuándo se entonó por primera vez oficialmente?</p>
+                    <label><input type="radio" name="himno1-p9" value="a"> 28 de julio</label>
+                    <label><input type="radio" name="himno1-p9" value="b"> 23 de septiembre</label>
+                    <label><input type="radio" name="himno1-p9" value="c"> 9 de diciembre</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Cómo es considerado jurídicamente?</p>
+                    <label><input type="radio" name="himno1-p10" value="a"> Obra opcional</label>
+                    <label><input type="radio" name="himno1-p10" value="b"> Símbolo patrio oficial</label>
+                    <label><input type="radio" name="himno1-p10" value="c"> Himno de Lima</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-himno1', ['b','a','b','b','b','b','b','b','a','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page16.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page18.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

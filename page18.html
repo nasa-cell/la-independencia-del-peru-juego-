@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>El Himno Nacional - Parte II — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>El Himno Nacional - Parte II</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-amarillo">
+            <h2 class="titulo-heroe">El Himno Nacional - Parte II</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/F9hHe1vCgwk?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-himno2">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Qué estrofa fue declarada apócrifa?</p>
+                    <label><input type="radio" name="himno2-p1" value="a"> "Largo tiempo el peruano oprimido..."</label>
+                    <label><input type="radio" name="himno2-p1" value="b"> Estrofa de los Andes</label>
+                    <label><input type="radio" name="himno2-p1" value="c"> Coro principal</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Qué decidió el Ministerio de Educación?</p>
+                    <label><input type="radio" name="himno2-p2" value="a"> Sustituir por instrumental</label>
+                    <label><input type="radio" name="himno2-p2" value="b"> Entonar la sexta estrofa oficial</label>
+                    <label><input type="radio" name="himno2-p2" value="c"> Traducir a otro idioma</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué mensaje expresa la sexta estrofa?</p>
+                    <label><input type="radio" name="himno2-p3" value="a"> Riquezas mineras</label>
+                    <label><input type="radio" name="himno2-p3" value="b"> Andes sostienen la bandera</label>
+                    <label><input type="radio" name="himno2-p3" value="c"> Tristeza por pérdidas</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Quién restauró la partitura en 1869?</p>
+                    <label><input type="radio" name="himno2-p4" value="a"> Claudio Rebagliati</label>
+                    <label><input type="radio" name="himno2-p4" value="b"> Daniel Alomía Robles</label>
+                    <label><input type="radio" name="himno2-p4" value="c"> Juan Diego Flórez</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué ley declaró intangibles letra y música?</p>
+                    <label><input type="radio" name="himno2-p5" value="a"> Resolución de Castilla</label>
+                    <label><input type="radio" name="himno2-p5" value="b"> Ley N° 1801</label>
+                    <label><input type="radio" name="himno2-p5" value="c"> Decreto ley 2015</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué conducta se exige al entonar el himno?</p>
+                    <label><input type="radio" name="himno2-p6" value="a"> Permanecer sentados</label>
+                    <label><input type="radio" name="himno2-p6" value="b"> Ponerse de pie firmes</label>
+                    <label><input type="radio" name="himno2-p6" value="c"> Aplaudir ruidosamente</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué significa apócrifa?</p>
+                    <label><input type="radio" name="himno2-p7" value="a"> Origen sagrado</label>
+                    <label><input type="radio" name="himno2-p7" value="b"> Duda de autenticidad</label>
+                    <label><input type="radio" name="himno2-p7" value="c"> Escrita en quechua</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué institución vela por los símbolos patrios?</p>
+                    <label><input type="radio" name="himno2-p8" value="a"> Ministerio de Educación</label>
+                    <label><input type="radio" name="himno2-p8" value="b"> Banco Central</label>
+                    <label><input type="radio" name="himno2-p8" value="c"> Ministerio de Comercio</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué valor implica el verso "Seámoslo siempre"?</p>
+                    <label><input type="radio" name="himno2-p9" value="a"> Búsqueda de riquezas</label>
+                    <label><input type="radio" name="himno2-p9" value="b"> Defender la libertad y soberanía</label>
+                    <label><input type="radio" name="himno2-p9" value="c"> Mantener fronteras cerradas</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Cuál es la función social del himno?</p>
+                    <label><input type="radio" name="himno2-p10" value="a"> Protocolo aburrido</label>
+                    <label><input type="radio" name="himno2-p10" value="b"> Fortalecer identidad nacional</label>
+                    <label><input type="radio" name="himno2-p10" value="c"> Promover competencia comercial</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-himno2', ['a','b','b','a','b','b','b','a','b','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page17.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page19.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

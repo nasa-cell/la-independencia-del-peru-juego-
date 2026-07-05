@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Túpac Amaru II — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Túpac Amaru II</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-rojo">
+            <h2 class="titulo-heroe">Túpac Amaru II - Héroe de la Rebelión</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/sqmXxnRcfDg?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-tupac">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Cuál era el nombre verdadero y completo de Túpac Amaru II?</p>
+                    <label><input type="radio" name="tupac-p1" value="a"> José Olaya Balandra</label>
+                    <label><input type="radio" name="tupac-p1" value="b"> José Gabriel Condorcanqui Noguera</label>
+                    <label><input type="radio" name="tupac-p1" value="c"> Juan Santos Atahualpa</label>
+                </div>
+                <div class="pregunta"><p>2. ¿En qué año inició la gran rebelión indígena liderada por Túpac Amaru II?</p>
+                    <label><input type="radio" name="tupac-p2" value="a"> 1532</label>
+                    <label><input type="radio" name="tupac-p2" value="b"> 1780</label>
+                    <label><input type="radio" name="tupac-p2" value="c"> 1821</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué cargo de autoridad tradicional poseía?</p>
+                    <label><input type="radio" name="tupac-p3" value="a"> Corregidor español</label>
+                    <label><input type="radio" name="tupac-p3" value="b"> Cacique o Curaca</label>
+                    <label><input type="radio" name="tupac-p3" value="c"> Alcalde de indios</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Contra qué abusos específicos del sistema colonial se rebeló?</p>
+                    <label><input type="radio" name="tupac-p4" value="a"> Prohibición del comercio exterior</label>
+                    <label><input type="radio" name="tupac-p4" value="b"> Abusos de corregidores, reparto y mita</label>
+                    <label><input type="radio" name="tupac-p4" value="c"> Cobro del diezmo eclesiástico únicamente</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Quién fue su valiente esposa y co-líder?</p>
+                    <label><input type="radio" name="tupac-p5" value="a"> María Parado de Bellido</label>
+                    <label><input type="radio" name="tupac-p5" value="b"> Micaela Bastidas Puyucahua</label>
+                    <label><input type="radio" name="tupac-p5" value="c"> Clorinda Matto de Turner</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué odiado corregidor español fue capturado y enjuiciado al inicio de la rebelión?</p>
+                    <label><input type="radio" name="tupac-p6" value="a"> Antonio de Arriaga</label>
+                    <label><input type="radio" name="tupac-p6" value="b"> José de Canterac</label>
+                    <label><input type="radio" name="tupac-p6" value="c"> Francisco de Toledo</label>
+                </div>
+                <div class="pregunta"><p>7. ¿En qué plaza histórica fue sentenciado y ejecutado?</p>
+                    <label><input type="radio" name="tupac-p7" value="a"> Plaza de Armas de Lima</label>
+                    <label><input type="radio" name="tupac-p7" value="b"> Plaza de Armas del Cusco</label>
+                    <label><input type="radio" name="tupac-p7" value="c"> Plaza San Martín</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué método cruel usaron los españoles para desmembrarlo?</p>
+                    <label><input type="radio" name="tupac-p8" value="a"> Atar extremidades a cuatro caballos</label>
+                    <label><input type="radio" name="tupac-p8" value="b"> Lanzarlo desde una torre</label>
+                    <label><input type="radio" name="tupac-p8" value="c"> Enterrarlo bajo una avalancha</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Cuál era el fin supremo de su levantamiento?</p>
+                    <label><input type="radio" name="tupac-p9" value="a"> Rebaja de precios en arrierajes</label>
+                    <label><input type="radio" name="tupac-p9" value="b"> Acabar con explotación colonial y emancipar al pueblo</label>
+                    <label><input type="radio" name="tupac-p9" value="c"> Ser nombrado Virrey del Perú</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Por qué es figura trascendental en América Latina?</p>
+                    <label><input type="radio" name="tupac-p10" value="a"> Fundar la ciudad imperial del Cusco</label>
+                    <label><input type="radio" name="tupac-p10" value="b"> Precursor de la lucha por la libertad y justicia social</label>
+                    <label><input type="radio" name="tupac-p10" value="c"> Abrir nuevas rutas de comercio minero</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-tupac', ['b','b','b','b','b','a','b','a','b','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page1.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page3.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Carpetas de IDE y herramientas
+.qodo/
+.vscode/
+.idea/
+*.code-workspace
+
+# Archivos de Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Archivos de configuración sensible
+config.local.js
+.env
+.env.local
+
+# Archivos grandes (opcional, si quieres versionar)
+*.mp3
+*.wav
+*.mp4
+
+# Scripts de PowerShell (mantenimiento local)
+*.ps1
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class

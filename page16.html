@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>La Batalla de Junín — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Batalla de Junín</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-verde">
+            <h2 class="titulo-heroe">La Batalla de Junín</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/2XqtpZIddN0?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-junin">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué año se libró Junín?</p>
+                    <label><input type="radio" name="junin-p1" value="a"> 1821</label>
+                    <label><input type="radio" name="junin-p1" value="b"> 1824</label>
+                    <label><input type="radio" name="junin-p1" value="c"> 1824</label>
+                </div>
+                <div class="pregunta"><p>2. ¿A qué altitud chocaron los ejércitos?</p>
+                    <label><input type="radio" name="junin-p2" value="a"> 100 metros</label>
+                    <label><input type="radio" name="junin-p2" value="b"> Más de 4,000 metros</label>
+                    <label><input type="radio" name="junin-p2" value="c"> Valles tropicales</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Por qué se llama Batalla de las Armas Blancas?</p>
+                    <label><input type="radio" name="junin-p3" value="a"> Uniformes blancos</label>
+                    <label><input type="radio" name="junin-p3" value="b"> Lucharon con sables y bayonetas sin disparos</label>
+                    <label><input type="radio" name="junin-p3" value="c"> Nevó durante la batalla</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué general español comandaba la caballería?</p>
+                    <label><input type="radio" name="junin-p4" value="a"> José de Canterac</label>
+                    <label><input type="radio" name="junin-p4" value="b"> Jerónimo Valdés</label>
+                    <label><input type="radio" name="junin-p4" value="c"> Rodil</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué escuadrón cambió la batalla?</p>
+                    <label><input type="radio" name="junin-p5" value="a"> Húsares de Junín</label>
+                    <label><input type="radio" name="junin-p5" value="b"> Dragones del Norte</label>
+                    <label><input type="radio" name="junin-p5" value="c"> Invencibles de Pasco</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Quién cambió la orden de retirada?</p>
+                    <label><input type="radio" name="junin-p6" value="a"> José Andrés Rázuri</label>
+                    <label><input type="radio" name="junin-p6" value="b"> San Martín</label>
+                    <label><input type="radio" name="junin-p6" value="c"> Ramón Castilla</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Quién mandaba el Ejército Unido?</p>
+                    <label><input type="radio" name="junin-p7" value="a"> Bolívar</label>
+                    <label><input type="radio" name="junin-p7" value="b"> Sucre</label>
+                    <label><input type="radio" name="junin-p7" value="c"> San Martín</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Cuál fue el impacto?</p>
+                    <label><input type="radio" name="junin-p8" value="a"> Sin importancia</label>
+                    <label><input type="radio" name="junin-p8" value="b"> Elevó la moral patriota</label>
+                    <label><input type="radio" name="junin-p8" value="c"> Obligó a replegarse</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué nombre le dio Bolívar al regimiento?</p>
+                    <label><input type="radio" name="junin-p9" value="a"> Húsares de Junín</label>
+                    <label><input type="radio" name="junin-p9" value="b"> Lanceros de los Andes</label>
+                    <label><input type="radio" name="junin-p9" value="c"> Invencibles de la Sierra</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué monumento se levanta hoy?</p>
+                    <label><input type="radio" name="junin-p10" value="a"> Anfiteatro</label>
+                    <label><input type="radio" name="junin-p10" value="b"> Obelisco de Chacamarca</label>
+                    <label><input type="radio" name="junin-p10" value="c"> Réplica de la casa de Bolívar</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-junin', ['b','b','b','a','a','a','a','b','a','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page15.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page17.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

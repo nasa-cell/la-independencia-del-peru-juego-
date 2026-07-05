@@ -1,0 +1,155 @@
+/* ============================================
+   ESTILOS BANDERA PERUANA - FONDO GLOBAL
+   ============================================ */
+
+:root {
+    --color-rojo-peru: #CE1126;
+    --color-blanco: #FFFFFF;
+    --color-oro: #FFD700;
+}
+
+/* Fondo con bandera peruana */
+body.bandera-fondo {
+    background: linear-gradient(90deg, 
+        var(--color-rojo-peru) 0%, 
+        var(--color-rojo-peru) 33.33%, 
+        var(--color-blanco) 33.33%, 
+        var(--color-blanco) 66.66%, 
+        var(--color-rojo-peru) 66.66%, 
+        var(--color-rojo-peru) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Alternativa con patrón de bandera */
+body.bandera-patron {
+    background: 
+        linear-gradient(90deg, 
+            var(--color-rojo-peru) 0%, 
+            var(--color-rojo-peru) 33.33%, 
+            var(--color-blanco) 33.33%, 
+            var(--color-blanco) 66.66%, 
+            var(--color-rojo-peru) 66.66%, 
+            var(--color-rojo-peru) 100%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Overlay semi-transparente para mejor legibilidad del texto */
+body.bandera-patron::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Borde de bandera en elementos principales */
+.con-borde-bandera {
+    border-left: 6px solid var(--color-rojo-peru);
+    border-right: 6px solid var(--color-rojo-peru);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Línea decorativa con bandera */
+.linea-bandera {
+    height: 8px;
+    background: linear-gradient(90deg, 
+        var(--color-rojo-peru) 0%, 
+        var(--color-rojo-peru) 33.33%, 
+        var(--color-blanco) 33.33%, 
+        var(--color-blanco) 66.66%, 
+        var(--color-rojo-peru) 66.66%, 
+        var(--color-rojo-peru) 100%);
+    margin: 20px 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(206, 17, 38, 0.2);
+}
+
+/* Encabezado con bandera */
+header.bandera-header {
+    background: linear-gradient(135deg, var(--color-rojo-peru), var(--color-blanco) 50%, var(--color-rojo-peru));
+    color: white;
+    padding: 20px;
+    border-bottom: 4px solid var(--color-oro);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones con estilo bandera */
+.btn-bandera {
+    background: linear-gradient(135deg, var(--color-rojo-peru), var(--color-blanco) 50%);
+    color: var(--color-rojo-peru);
+    border: 2px solid var(--color-rojo-peru);
+    font-weight: bold;
+}
+
+.btn-bandera:hover {
+    box-shadow: 0 0 15px rgba(206, 17, 38, 0.4);
+    transform: scale(1.05);
+}
+
+/* Contenedor con fondo bandera semi-transparente */
+.contenedor-bandera {
+    background: 
+        linear-gradient(90deg, 
+            rgba(206, 17, 38, 0.1) 0%, 
+            rgba(206, 17, 38, 0.1) 33.33%, 
+            rgba(255, 255, 255, 0.1) 33.33%, 
+            rgba(255, 255, 255, 0.1) 66.66%, 
+            rgba(206, 17, 38, 0.1) 66.66%, 
+            rgba(206, 17, 38, 0.1) 100%);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+/* Texto con colores de bandera */
+.texto-bandera {
+    background: linear-gradient(90deg, 
+        var(--color-rojo-peru) 0%, 
+        var(--color-rojo-peru) 33.33%, 
+        var(--color-blanco) 33.33%, 
+        var(--color-blanco) 66.66%, 
+        var(--color-rojo-peru) 66.66%, 
+        var(--color-rojo-peru) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Efecto bandera animada */
+@keyframes banderas-onda {
+    0%, 100% {
+        transform: skewX(0deg);
+    }
+    25% {
+        transform: skewX(1deg);
+    }
+    75% {
+        transform: skewX(-1deg);
+    }
+}
+
+.bandera-onda {
+    animation: banderas-onda 3s ease-in-out infinite;
+}
+
+/* Print styles con bandera */
+@media print {
+    body::before {
+        content: '🇵🇪 HATUN AVENTURAS HEROICAS 🇵🇪';
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}

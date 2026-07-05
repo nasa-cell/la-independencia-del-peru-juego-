@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Combate del 2 de Mayo — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Combate del 2 de Mayo</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-naranja">
+            <h2 class="titulo-heroe">Combate del 2 de Mayo</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/o4ucgzwI5ns?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-2demayo">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué año se libró el Combate del 2 de Mayo?</p>
+                    <label><input type="radio" name="2demayo-p1" value="a"> 1821</label>
+                    <label><input type="radio" name="2demayo-p1" value="b"> 1866</label>
+                    <label><input type="radio" name="2demayo-p1" value="c"> 1879</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Qué fuerza bombardeó el Callao?</p>
+                    <label><input type="radio" name="2demayo-p2" value="a"> Escuadra Civil Francesa</label>
+                    <label><input type="radio" name="2demayo-p2" value="b"> Escuadra Real Española</label>
+                    <label><input type="radio" name="2demayo-p2" value="c"> Armada de Estados Unidos</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué puerto se fortificó?</p>
+                    <label><input type="radio" name="2demayo-p3" value="a"> Puerto de Paita</label>
+                    <label><input type="radio" name="2demayo-p3" value="b"> Callao</label>
+                    <label><input type="radio" name="2demayo-p3" value="c"> Puerto de Matarani</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Quién fue el Ministro de Guerra y Marina?</p>
+                    <label><input type="radio" name="2demayo-p4" value="a"> José Gálvez Egúsquiza</label>
+                    <label><input type="radio" name="2demayo-p4" value="b"> Ramón Castilla</label>
+                    <label><input type="radio" name="2demayo-p4" value="c"> Miguel Grau</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué ocurrió en la Torre de la Merced?</p>
+                    <label><input type="radio" name="2demayo-p5" value="a"> Polvorín humedecido</label>
+                    <label><input type="radio" name="2demayo-p5" value="b"> Explosión que mató a José Gálvez</label>
+                    <label><input type="radio" name="2demayo-p5" value="c"> Retiro de las fuerzas</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué hicieron civiles y bomberos?</p>
+                    <label><input type="radio" name="2demayo-p6" value="a"> Abandonaron el puerto</label>
+                    <label><input type="radio" name="2demayo-p6" value="b"> Socorrieron heridos y recargaron cañones</label>
+                    <label><input type="radio" name="2demayo-p6" value="c"> Se manifestaron contra el gobierno</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Cuál fue el resultado militar definitivo?</p>
+                    <label><input type="radio" name="2demayo-p7" value="a"> Tomaron la capital</label>
+                    <label><input type="radio" name="2demayo-p7" value="b"> Fueron dañados y se retiraron</label>
+                    <label><input type="radio" name="2demayo-p7" value="c"> Firmaron un contrato comercial</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué fecha se conmemora?</p>
+                    <label><input type="radio" name="2demayo-p8" value="a"> 2 de mayo</label>
+                    <label><input type="radio" name="2demayo-p8" value="b"> 9 de octubre</label>
+                    <label><input type="radio" name="2demayo-p8" value="c"> 7 de junio</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué cañón histórico se recuerda?</p>
+                    <label><input type="radio" name="2demayo-p9" value="a"> El Destructor</label>
+                    <label><input type="radio" name="2demayo-p9" value="b"> El Pueblo</label>
+                    <label><input type="radio" name="2demayo-p9" value="c"> El Huáscar terrestre</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué monumento recuerda esta gesta?</p>
+                    <label><input type="radio" name="2demayo-p10" value="a"> Monumento a los Héroes de la Selva</label>
+                    <label><input type="radio" name="2demayo-p10" value="b"> Monumento al Dos de Mayo</label>
+                    <label><input type="radio" name="2demayo-p10" value="c"> Obelisco de los Conquistadores</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-2demayo', ['b','b','c','a','b','b','b','a','b','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page13.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page15.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

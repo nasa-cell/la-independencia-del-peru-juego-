@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Everardo Zapata — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Everardo Zapata</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-azul">
+            <h2 class="titulo-heroe">Everardo Zapata - Educador</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/-Y6DFqdUtAc?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-zapata">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Quién fue Everardo Zapata Santillana?</p>
+                    <label><input type="radio" name="sanmartin-p1" value="a"> Un almirante</label>
+                    <label><input type="radio" name="sanmartin-p1" value="b"> Un maestro creador del libro "Coquito"</label>
+                    <label><input type="radio" name="sanmartin-p1" value="c"> Un explorador amazónico</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Cuál es el nombre del texto escolar?</p>
+                    <label><input type="radio" name="sanmartin-p2" value="a"> Coquito</label>
+                    <label><input type="radio" name="sanmartin-p2" value="b"> Nacho de lectura</label>
+                    <label><input type="radio" name="sanmartin-p2" value="c"> Silabario Americano</label>
+                </div>
+                <div class="pregunta"><p>3. ¿De qué región era originario?</p>
+                    <label><input type="radio" name="sanmartin-p3" value="a"> Lima</label>
+                    <label><input type="radio" name="sanmartin-p3" value="b"> Arequipa</label>
+                    <label><input type="radio" name="sanmartin-p3" value="c"> Loreto</label>
+                </div>
+                <div class="pregunta"><p>4. ¿En qué año salió la primera edición de Coquito?</p>
+                    <label><input type="radio" name="sanmartin-p4" value="a"> 1821</label>
+                    <label><input type="radio" name="sanmartin-p4" value="b"> 1955</label>
+                    <label><input type="radio" name="sanmartin-p4" value="c"> 2001</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué método educativo usó?</p>
+                    <label><input type="radio" name="sanmartin-p5" value="a"> Repetición memorística</label>
+                    <label><input type="radio" name="sanmartin-p5" value="b"> Método fonético con imágenes</label>
+                    <label><input type="radio" name="sanmartin-p5" value="c"> Aprendizaje de lenguas clásicas</label>
+                </div>
+                <div class="pregunta"><p>6. ¿A cuántos estudiantes benefició?</p>
+                    <label><input type="radio" name="sanmartin-p6" value="a"> Miles</label>
+                    <label><input type="radio" name="sanmartin-p6" value="b"> Decenas de millones</label>
+                    <label><input type="radio" name="sanmartin-p6" value="c"> Solo rurales</label>
+                </div>
+                <div class="pregunta"><p>7. ¿A qué regiones se extendió Coquito?</p>
+                    <label><input type="radio" name="sanmartin-p7" value="a"> Solo Asia</label>
+                    <label><input type="radio" name="sanmartin-p7" value="b"> Países hispanohablantes en América</label>
+                    <label><input type="radio" name="sanmartin-p7" value="c"> No salió de su provincia</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Cuál fue su motivación principal?</p>
+                    <label><input type="radio" name="sanmartin-p8" value="a"> Erradicar el analfabetismo con un método sencillo</label>
+                    <label><input type="radio" name="sanmartin-p8" value="b"> Ganar un premio monetario</label>
+                    <label><input type="radio" name="sanmartin-p8" value="c"> Encargo del Ministerio de Economía</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué distinción recibió del Estado?</p>
+                    <label><input type="radio" name="sanmartin-p9" value="a"> Palmas Magisteriales Grado Amauta</label>
+                    <label><input type="radio" name="sanmartin-p9" value="b"> Grado de General</label>
+                    <label><input type="radio" name="sanmartin-p9" value="c"> Medalla deportiva</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Por qué es un héroe civil?</p>
+                    <label><input type="radio" name="sanmartin-p10" value="a"> Por derrotar el analfabetismo</label>
+                    <label><input type="radio" name="sanmartin-p10" value="b"> Por participar en revoluciones armadas</label>
+                    <label><input type="radio" name="sanmartin-p10" value="c"> Por inventar imprenta</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-zapata', ['b','a','b','b','b','b','b','a','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page7.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page9.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

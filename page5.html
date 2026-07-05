@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>José de San Martín — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>José de San Martín</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-cafe">
+            <h2 class="titulo-heroe">José de San Martín - Protector de la Independencia</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/PhuOqE2LPFE?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-sanmartin">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué actual nación nació José de San Martín?</p>
+                    <label><input type="radio" name="indep-p1" value="a"> Perú</label>
+                    <label><input type="radio" name="indep-p1" value="b"> Argentina</label>
+                    <label><input type="radio" name="indep-p1" value="c"> Chile</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Qué empresa militar comandó antes de llegar al Perú?</p>
+                    <label><input type="radio" name="indep-p2" value="a"> Cruce de los Andes</label>
+                    <label><input type="radio" name="indep-p2" value="b"> Navegación del Amazonas</label>
+                    <label><input type="radio" name="indep-p2" value="c"> Expedición por los llanos</label>
+                </div>
+                <div class="pregunta"><p>3. ¿En qué fecha proclamó la Independencia del Perú?</p>
+                    <label><input type="radio" name="indep-p3" value="a"> 28 de julio de 1821</label>
+                    <label><input type="radio" name="indep-p3" value="b"> 9 de diciembre de 1824</label>
+                    <label><input type="radio" name="indep-p3" value="c"> 2 de mayo de 1866</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Dónde escuchó la proclama la multitud?</p>
+                    <label><input type="radio" name="indep-p4" value="a"> Plaza Mayor de Lima</label>
+                    <label><input type="radio" name="indep-p4" value="b"> Plaza de Armas de Trujillo</label>
+                    <label><input type="radio" name="indep-p4" value="c"> Plaza de la Exposición</label>
+                </div>
+                <div class="pregunta"><p>5. Completa: "El Perú es libre... y por la justicia de su causa que..."</p>
+                    <label><input type="radio" name="indep-p5" value="a"> ... el Rey comprende.</label>
+                    <label><input type="radio" name="indep-p5" value="b"> ... Dios defiende.</label>
+                    <label><input type="radio" name="indep-p5" value="c"> ... las armas peruanas imponen.</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué título asumió San Martín?</p>
+                    <label><input type="radio" name="indep-p6" value="a"> Dictador Supremo</label>
+                    <label><input type="radio" name="indep-p6" value="b"> Protector del Perú</label>
+                    <label><input type="radio" name="indep-p6" value="c"> Presidente Constitucional</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué aves inspiraron la bandera?</p>
+                    <label><input type="radio" name="indep-p7" value="a"> Parihuanas</label>
+                    <label><input type="radio" name="indep-p7" value="b"> Cóndores</label>
+                    <label><input type="radio" name="indep-p7" value="c"> Guacamayos</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué institución fundó?</p>
+                    <label><input type="radio" name="indep-p8" value="a"> Museo Nacional</label>
+                    <label><input type="radio" name="indep-p8" value="b"> Biblioteca Nacional del Perú</label>
+                    <label><input type="radio" name="indep-p8" value="c"> Casa de la Moneda</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Con quién tuvo la Entrevista de Guayaquil?</p>
+                    <label><input type="radio" name="indep-p9" value="a"> Simón Bolívar</label>
+                    <label><input type="radio" name="indep-p9" value="b"> Antonio José de Sucre</label>
+                    <label><input type="radio" name="indep-p9" value="c"> Francisco de Miranda</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué sistema político prefería?</p>
+                    <label><input type="radio" name="indep-p10" value="a"> República Federal</label>
+                    <label><input type="radio" name="indep-p10" value="b"> Monarquía Constitucional</label>
+                    <label><input type="radio" name="indep-p10" value="c"> Gobierno incaico colonial</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-sanmartin', ['b','b','a','b','b','b','b','b','a','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page4.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page6.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

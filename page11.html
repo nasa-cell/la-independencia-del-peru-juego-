@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Micaela Bastidas — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Micaela Bastidas</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-verde">
+            <h2 class="titulo-heroe">Micaela Bastidas - Compañera de Túpac Amaru II</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/g3RBeAefmAk?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-bastidas">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Quién fue Micaela Bastidas?</p>
+                    <label><input type="radio" name="bastidas-p1" value="a"> Pintora cusqueña</label>
+                    <label><input type="radio" name="bastidas-p1" value="b"> Estratega revolucionaria</label>
+                    <label><input type="radio" name="bastidas-p1" value="c"> Primera mujer legisladora</label>
+                </div>
+                <div class="pregunta"><p>2. ¿De qué líder fue esposa?</p>
+                    <label><input type="radio" name="bastidas-p2" value="a"> Túpac Amaru II</label>
+                    <label><input type="radio" name="bastidas-p2" value="b"> Manco Inca</label>
+                    <label><input type="radio" name="bastidas-p2" value="c"> Juan Santos Atahualpa</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué funciones tenía en Tungasuca?</p>
+                    <label><input type="radio" name="bastidas-p3" value="a"> Domésticas</label>
+                    <label><input type="radio" name="bastidas-p3" value="b"> Abastecimiento y organización</label>
+                    <label><input type="radio" name="bastidas-p3" value="c"> Transcribir textos religiosos</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué rasgos la definían?</p>
+                    <label><input type="radio" name="bastidas-p4" value="a"> Inteligencia y firmeza</label>
+                    <label><input type="radio" name="bastidas-p4" value="b"> Temor constante</label>
+                    <label><input type="radio" name="bastidas-p4" value="c"> Desinterés</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué carta estratégica envió?</p>
+                    <label><input type="radio" name="bastidas-p5" value="a"> Replegarse a la selva</label>
+                    <label><input type="radio" name="bastidas-p5" value="b"> Cercar Cusco antes de refuerzos</label>
+                    <label><input type="radio" name="bastidas-p5" value="c"> Buscar paz con la Audiencia</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Cómo cayó prisionera?</p>
+                    <label><input type="radio" name="bastidas-p6" value="a"> Tras traición y derrota</label>
+                    <label><input type="radio" name="bastidas-p6" value="b"> Se entregó por dinero</label>
+                    <label><input type="radio" name="bastidas-p6" value="c"> Interceptada en la frontera</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué sentencia le impuso Areche?</p>
+                    <label><input type="radio" name="bastidas-p7" value="a"> Destierro</label>
+                    <label><input type="radio" name="bastidas-p7" value="b"> Garrote y descuartizamiento</label>
+                    <label><input type="radio" name="bastidas-p7" value="c"> Confinamiento en convento</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Quién fue ejecutado ante ella?</p>
+                    <label><input type="radio" name="bastidas-p8" value="a"> Hermanos menores</label>
+                    <label><input type="radio" name="bastidas-p8" value="b"> Su hijo Hipólito</label>
+                    <label><input type="radio" name="bastidas-p8" value="c"> Ninguno</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Cuál era su origen étnico?</p>
+                    <label><input type="radio" name="bastidas-p9" value="a"> Hispano-afroindígena</label>
+                    <label><input type="radio" name="bastidas-p9" value="b"> Puremente europeo</label>
+                    <label><input type="radio" name="bastidas-p9" value="c"> Criolla limeña</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué representa su figura?</p>
+                    <label><input type="radio" name="bastidas-p10" value="a"> Liderazgo femenino y justicia social</label>
+                    <label><input type="radio" name="bastidas-p10" value="b"> Nacimiento del arte textil</label>
+                    <label><input type="radio" name="bastidas-p10" value="c"> Primera cartógrafa</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-bastidas', ['b','a','a','b','b','a','b','b','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page10.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page12.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¡Felicitaciones! - Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="resultados-container">
+        <div class="resultados-header">
+            <span class="trophy-emoji">🏆</span>
+            <h1>¡Felicitaciones!</h1>
+            <p>Has completado la aventura patriótica</p>
+            <div class="stars">⭐ ⭐ ⭐</div>
+        </div>
+
+        <div class="data-section">
+            <div class="data-row">
+                <span class="data-label">👤 Estudiante:</span>
+                <span class="data-value" id="nombreEstudiante">-</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">📚 Grado:</span>
+                <span class="data-value" id="gradoEstudiante">-</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">🎯 Puntaje:</span>
+                <span class="data-value" id="puntajeEstudiante">-</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">⏱️ Tiempo:</span>
+                <span class="data-value" id="tiempoEstudiante">-</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">✅ Actividades:</span>
+                <span class="data-value" id="actividadesEstudiante">-</span>
+            </div>
+        </div>
+
+        <div class="score-display">
+            <h2>📊 Puntaje Acumulado</h2>
+            <div class="big-number" id="puntajeFinal">- pts</div>
+        </div>
+
+        <div id="mensajeResultados" class="mensaje-enviado" style="display: none;">
+            ✅ Resultados ya fueron enviados
+        </div>
+
+        <div class="btn-container">
+            <button class="btn btn-secondary" onclick="reiniciarJuegoFinal()">
+                🔄 Reiniciar Juego
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="registro.js"></script>
+    <script src="final.js"></script>
+</body>
+</html>
+

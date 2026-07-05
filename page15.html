@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>La Independencia del Perú — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>La Independencia del Perú</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-morado">
+            <h2 class="titulo-heroe">La Independencia del Perú</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/U9ls4ueMbjg?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-indep">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Qué celebramos el 28 de julio?</p>
+                    <label><input type="radio" name="indep2-p1" value="a"> Batalla de Junín</label>
+                    <label><input type="radio" name="indep2-p1" value="b"> Proclamación de la Independencia</label>
+                    <label><input type="radio" name="indep2-p1" value="c"> Primera constitución</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Quién proclamó la libertad en Lima?</p>
+                    <label><input type="radio" name="indep2-p2" value="a"> San Martín</label>
+                    <label><input type="radio" name="indep2-p2" value="b"> Bolívar</label>
+                    <label><input type="radio" name="indep2-p2" value="c"> Sucre</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué documento se firmó el 15 de julio de 1821?</p>
+                    <label><input type="radio" name="indep2-p3" value="a"> Tratado de Paz</label>
+                    <label><input type="radio" name="indep2-p3" value="b"> Acta de la Independencia</label>
+                    <label><input type="radio" name="indep2-p3" value="c"> Estatuto de Comercio</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Dónde desembarcó la Expedición Libertadora de 1820?</p>
+                    <label><input type="radio" name="indep2-p4" value="a"> Paracas</label>
+                    <label><input type="radio" name="indep2-p4" value="b"> Ancón</label>
+                    <label><input type="radio" name="indep2-p4" value="c"> Callao</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Quién era el último virrey antes de Lima libre?</p>
+                    <label><input type="radio" name="indep2-p5" value="a"> José de la Serna</label>
+                    <label><input type="radio" name="indep2-p5" value="b"> Joaquín de la Pezuela</label>
+                    <label><input type="radio" name="indep2-p5" value="c"> Francisco de Toledo</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Por qué era clave el Perú para América?</p>
+                    <label><input type="radio" name="indep2-p6" value="a"> Porque concentraba el poder realista</label>
+                    <label><input type="radio" name="indep2-p6" value="b"> Por sus riquezas agrícolas</label>
+                    <label><input type="radio" name="indep2-p6" value="c"> Por un acuerdo con Gran Bretaña</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué sectores apoyaron la independencia?</p>
+                    <label><input type="radio" name="indep2-p7" value="a"> Solo extranjeros</label>
+                    <label><input type="radio" name="indep2-p7" value="b"> Indígenas, mestizos, negros y criollos</label>
+                    <label><input type="radio" name="indep2-p7" value="c"> Solo nobleza limeña</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué intendencia proclamó su independencia en 1820?</p>
+                    <label><input type="radio" name="indep2-p8" value="a"> Trujillo</label>
+                    <label><input type="radio" name="indep2-p8" value="b"> Arequipa</label>
+                    <label><input type="radio" name="indep2-p8" value="c"> Moquegua</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué colores estableció San Martín para la bandera?</p>
+                    <label><input type="radio" name="indep2-p9" value="a"> Rojo y blanco</label>
+                    <label><input type="radio" name="indep2-p9" value="b"> Azul, blanco y rojo</label>
+                    <label><input type="radio" name="indep2-p9" value="c"> Rojo, amarillo y verde</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué tarea quedó pendiente tras 1821?</p>
+                    <label><input type="radio" name="indep2-p10" value="a"> Expedición a Europa</label>
+                    <label><input type="radio" name="indep2-p10" value="b"> Desalojar al ejército realista</label>
+                    <label><input type="radio" name="indep2-p10" value="c"> Cambiar la moneda</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-indep', ['a','a','a','a','a','a','a','a','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page14.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page16.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

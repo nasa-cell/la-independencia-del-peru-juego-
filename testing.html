@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#CE1126">
+    <meta name="description" content="Panel de testing - Hatun Aventuras Heroicas">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Testing - Hatun Aventuras</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #CE1126 0%, #FFFFFF 50%, #FFD700 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        
+        .acceso-denegado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .acceso-denegado-content {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(206, 17, 38, 0.3);
+            max-width: 500px;
+        }
+        
+        .acceso-denegado-content h1 {
+            font-size: 48px;
+            color: #CE1126;
+            margin-bottom: 20px;
+        }
+        
+        .acceso-denegado-content p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .acceso-denegado-content a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .acceso-denegado-content a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(206, 17, 38, 0.3);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .header > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .header > div > div {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .btn-logout {
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-logout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(206, 17, 38, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            color: #CE1126;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .header-subtitle {
+            font-size: 0.95em;
+            color: #999;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            border-top: 5px solid #CE1126;
+            transition: all 0.3s ease;
+        }
+        
+        .test-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .test-section h2 {
+            color: #CE1126;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 12px;
+        }
+        
+        .section-icon {
+            font-size: 1.8em;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            color: white;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(206, 17, 38, 0.3);
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(206, 17, 38, 0.45);
+            background: linear-gradient(135deg, #9D0D1F, #7A0A18);
+        }
+        
+        button:active {
+            transform: translateY(-1px);
+        }
+        
+        .output {
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            padding: 20px;
+            margin-top: 18px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            border-left: 4px solid #CE1126;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            font-size: 0.9em;
+            line-height: 1.6;
+            max-height: 450px;
+            overflow-y: auto;
+            display: none;
+            background-color: #fafafa;
+        }
+        
+        .success {
+            color: #2E7D32;
+            font-weight: 700;
+        }
+        
+        .error {
+            color: #C62828;
+            font-weight: 700;
+        }
+        
+        .info {
+            color: #1565C0;
+            font-weight: 700;
+        }
+        
+        .warning {
+            color: #F57C00;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .test-section {
+                padding: 20px;
+            }
+        }
+        
+        /* Custom Scrollbar */
+        .output::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .output::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .output::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            border-radius: 10px;
+        }
+        
+        .output::-webkit-scrollbar-thumb:hover {
+            background: #9D0D1F;
+        }
+    </style>
+    <script>
+        // Verificar autenticación de profesor
+        if (!localStorage.getItem('profesorAutenticado')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.innerHTML = `
+                    <div class="acceso-denegado">
+                        <div class="acceso-denegado-content">
+                            <h1>🔒 Acceso Denegado</h1>
+                            <p>Esta sección es solo para profesores.</p>
+                            <p>Por favor, inicia sesión con tu contraseña.</p>
+                            <a href="registro.html">← Volver al Inicio</a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <div>
+                    <h1>🧪 Panel de Testing</h1>
+                    <p>Hatun Aventuras Heroicas</p>
+                    <span class="header-subtitle">Control de Calidad y Pruebas del Sistema</span>
+                </div>
+                <button onclick="cerrarSesionProfesor()" class="btn-logout">🚪 Cerrar Sesión</button>
+            </div>
+        </div>
+        
+        <div class="test-grid">
+            <div class="test-section">
+                <h2><span class="section-icon">👤</span>Estudiante Individual</h2>
+                <div class="button-group">
+                    <button onclick="testRegistrar()">📝 Registrar Estudiante</button>
+                    <button onclick="mostrarUltimoPayload()">📊 Ver Último Payload</button>
+                </div>
+                <div id="output1" class="output"></div>
+            </div>
+            
+            <div class="test-section">
+                <h2><span class="section-icon">👥</span>Múltiples Estudiantes</h2>
+                <div class="button-group">
+                    <button onclick="testGenerarEstudiantes()">🎓 Generar 5 Estudiantes</button>
+                    <button onclick="testEnviarCincoEstudiantes()">📨 Enviar 5 Alumnos</button>
+                </div>
+                <div id="output2" class="output"></div>
+            </div>
+            
+            <div class="test-section">
+                <h2><span class="section-icon">🔧</span>Herramientas</h2>
+                <div class="button-group">
+                    <button onclick="limpiarTodos()">🗑️ Limpiar Todos Datos</button>
+                    <button type="button" style="background: linear-gradient(135deg, #4285F4, #357AE8); color: white;" onclick="window.open('https://docs.google.com/spreadsheets/d/1wOjUvXkmyJHfp9b5rWZ3zw4Cun8nn8g6B6ytnyywW90/edit?usp=sharing', '_blank'); return false;">📊 Abrir Google Sheets</button>
+                </div>
+                <div id="output3" class="output"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Cierre Sesión -->
+    <div id="modalConfirmacionCierre" class="modal-confirmacion" style="display: none;">
+        <div class="modal-confirmacion-content">
+            <div class="modal-confirmacion-header">
+                <h2>🚪 Cerrar Sesión</h2>
+            </div>
+            
+            <div class="modal-confirmacion-body">
+                <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                <p class="modal-advertencia">Se regresará a la pantalla de inicio.</p>
+            </div>
+            
+            <div class="modal-confirmacion-footer">
+                <button type="button" class="btn btn-cancelar" onclick="cancelarCierre()">❌ Cancelar</button>
+                <button type="button" class="btn btn-confirmar" onclick="confirmarCierreSesion()">✓ Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Limpieza - Paso 1 -->
+    <div id="modalLimpiarConfirmacion1" class="modal-confirmacion" style="display: none;">
+        <div class="modal-confirmacion-content">
+            <div class="modal-confirmacion-header" style="background: linear-gradient(135deg, #FF6B6B, #DC5555);">
+                <h2>⚠️ Advertencia de Limpieza</h2>
+            </div>
+            
+            <div class="modal-confirmacion-body">
+                <p style="font-weight: 600; color: #CE1126;">¿Estás SEGURO de que deseas limpiar TODOS los datos?</p>
+                <div style="background: #FFF3F3; border-left: 4px solid #FF6B6B; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: left; font-size: 15px; color: #555;">
+                    <p style="margin: 0 0 10px 0; font-weight: 600;">Esto eliminará:</p>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Datos de estudiantes en Google Sheets</li>
+                        <li>Notas por página</li>
+                        <li>Historiales</li>
+                        <li>Configuración local</li>
+                    </ul>
+                </div>
+                <p style="color: #CE1126; font-weight: 600; margin: 15px 0 0 0;">¡Esta acción NO se puede deshacer!</p>
+            </div>
+            
+            <div class="modal-confirmacion-footer">
+                <button type="button" class="btn btn-cancelar" onclick="cancelarLimpiar(1)">❌ Cancelar</button>
+                <button type="button" class="btn" style="background: linear-gradient(135deg, #FF6B6B, #DC5555); color: white; box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);" onmouseover="this.style.background='linear-gradient(135deg, #DC5555, #C24545)'; this.style.boxShadow='0 8px 20px rgba(255, 107, 107, 0.35)';" onmouseout="this.style.background='linear-gradient(135deg, #FF6B6B, #DC5555)'; this.style.boxShadow='0 4px 12px rgba(255, 107, 107, 0.2)';" onclick="confirmarLimpiarPaso1()">⚠️ Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Limpieza - Paso 2 (ÚLTIMA OPORTUNIDAD) -->
+    <div id="modalLimpiarConfirmacion2" class="modal-confirmacion" style="display: none;">
+        <div class="modal-confirmacion-content">
+            <div class="modal-confirmacion-header" style="background: linear-gradient(135deg, #D32F2F, #B71C1C);">
+                <h2>🗑️ ÚLTIMA OPORTUNIDAD</h2>
+            </div>
+            
+            <div class="modal-confirmacion-body">
+                <p style="font-weight: 600; color: #D32F2F; font-size: 18px;">¿Confirmas que quieres ELIMINAR permanentemente TODOS los datos?</p>
+                <div style="background: #FFEBEE; border: 3px solid #D32F2F; border-radius: 10px; padding: 20px; margin: 20px 0;">
+                    <p style="font-size: 16px; color: #B71C1C; margin: 0; font-weight: 600;">⚡ INCLUYENDO Google Sheets</p>
+                </div>
+                <p style="color: #666; font-size: 14px; margin: 15px 0 0 0;">Esta es tu última oportunidad para cancelar antes de que se eliminen permanentemente todos los datos.</p>
+            </div>
+            
+            <div class="modal-confirmacion-footer">
+                <button type="button" class="btn btn-cancelar" onclick="cancelarLimpiar(2)">❌ NO, CANCELAR</button>
+                <button type="button" class="btn" style="background: linear-gradient(135deg, #D32F2F, #B71C1C); color: white; box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);" onmouseover="this.style.background='linear-gradient(135deg, #B71C1C, #A01010)'; this.style.boxShadow='0 8px 20px rgba(211, 47, 47, 0.35)';" onmouseout="this.style.background='linear-gradient(135deg, #D32F2F, #B71C1C)'; this.style.boxShadow='0 4px 12px rgba(211, 47, 47, 0.2)';" onclick="confirmarLimpiarFinal()">🗑️ SÍ, ELIMINAR TODO</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal-confirmacion {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+            backdrop-filter: blur(3px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-confirmacion-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 420px;
+            animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 2px solid rgba(206, 17, 38, 0.1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-confirmacion-header {
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            color: white;
+            padding: 30px 25px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 4px 15px rgba(206, 17, 38, 0.2);
+        }
+
+        .modal-confirmacion-header h2 {
+            font-size: 26px;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-confirmacion-body {
+            padding: 40px 30px 35px;
+            text-align: center;
+        }
+
+        .modal-confirmacion-body p {
+            font-size: 17px;
+            color: #555;
+            margin: 0 0 12px 0;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .modal-advertencia {
+            color: #666 !important;
+            font-size: 15px !important;
+            font-weight: 400 !important;
+        }
+
+        .modal-confirmacion-footer {
+            display: flex;
+            gap: 12px;
+            padding: 25px 30px 30px;
+            background: #F9F9F9;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .modal-confirmacion-footer .btn {
+            flex: 1;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cancelar {
+            background: #FFD700;
+            color: #333;
+            border: 2px solid #FFD700;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+        }
+
+        .btn-cancelar:hover {
+            background: #FFC700;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn-confirmar {
+            background: linear-gradient(135deg, #CE1126, #9D0D1F);
+            color: white;
+            box-shadow: 0 4px 12px rgba(206, 17, 38, 0.2);
+        }
+
+        .btn-confirmar:hover {
+            background: linear-gradient(135deg, #9D0D1F, #7A0A18);
+            box-shadow: 0 8px 25px rgba(206, 17, 38, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    <script src="registro.js"></script>
+    <script>
+        function mostrarOutput(id, mensaje, tipo = 'info') {
+            const elemento = document.getElementById(id);
+            elemento.style.display = 'block';
+            elemento.innerHTML = '<span class="' + tipo + '">' + mensaje + '</span>';
+            elemento.scrollTop = 0;
+        }
+        
+        // ============================================
+        // FUNCIÓN CERRAR SESIÓN PROFESOR
+        // ============================================
+        function cerrarSesionProfesor() {
+            const modal = document.getElementById('modalConfirmacionCierre');
+            modal.style.display = 'flex';
+        }
+        
+        function confirmarCierreSesion() {
+            localStorage.removeItem('profesorAutenticado');
+            window.location.href = 'registro.html';
+        }
+        
+        function cancelarCierre() {
+            document.getElementById('modalConfirmacionCierre').style.display = 'none';
+        }
+        
+        // Cerrar modal al hacer click fuera
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('modalConfirmacionCierre');
+            if (e.target === modal) {
+                cancelarCierre();
+            }
+            
+            const modal1 = document.getElementById('modalLimpiarConfirmacion1');
+            if (e.target === modal1) {
+                cancelarLimpiar(1);
+            }
+            
+            const modal2 = document.getElementById('modalLimpiarConfirmacion2');
+            if (e.target === modal2) {
+                cancelarLimpiar(2);
+            }
+        });
+        
+        function testRegistrar() {
+            limpiarDatos();
+            guardarEstudiante('2026', 'Estudiante Prueba', '5to Primaria');
+            mostrarOutput('output1', '✓ Estudiante registrado:\n' + JSON.stringify(obtenerEstudiante(), null, 2), 'success');
+        }
+
+        function simularPaginasNotas(notas) {
+            notas.forEach((nota, index) => {
+                const paginaActual = 'page' + (index + 1);
+                guardarNotaPagina(paginaActual, nota);
+            });
+        }
+
+        function testGenerarEstudiantes() {
+            const grado = '5to Primaria';
+            const estudiantes = [
+                {
+                    nombre: 'Ana',
+                    notas: [10, 0, 10, 10, 0, 10, 0, 10, 10, 10, 0, 10, 10, 10, 10, 0, 10, 10, 0, 10]
+                },
+                {
+                    nombre: 'Luis',
+                    notas: Array(20).fill(10)
+                },
+                {
+                    nombre: 'María',
+                    notas: [0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0]
+                },
+                {
+                    nombre: 'Jorge',
+                    notas: [8, 7, 10, 9, 6, 10, 10, 5, 7, 9, 10, 8, 6, 10, 7, 10, 9, 10, 8, 10]
+                },
+                {
+                    nombre: 'Camila',
+                    notas: [10, 10, 9, 10, 10, 10, 9, 10, 10, 10, 10, 9, 10, 10, 10, 9, 10, 10, 10, 10]
+                }
+            ];
+
+            let mensaje = '✓ Se generaron 5 estudiantes de prueba con notas por página:\n\n';
+
+            estudiantes.forEach(estudiante => {
+                limpiarDatos();
+                guardarEstudiante('2026', estudiante.nombre, grado);
+                simularPaginasNotas(estudiante.notas);
+                localStorage.setItem(STORAGE_KEYS.resultadoEnviado, 'false');
+
+                const datos = obtenerEstudiante();
+                mensaje += 'Nombre: ' + datos.nombre + ', Puntaje: ' + datos.puntaje + ' pts, Actividades: ' + datos.actividades + '/20\n';
+                mensaje += '  Pages: ' + estudiante.notas.join(', ') + '\n\n';
+            });
+
+            mostrarOutput('output2', mensaje, 'success');
+        }
+
+        async function testEnviarCincoEstudiantes() {
+            const grado = '5to Primaria';
+            const estudiantes = [
+                {
+                    nombre: 'Ana',
+                    notas: [10, 0, 10, 10, 0, 10, 0, 10, 10, 10, 0, 10, 10, 10, 10, 0, 10, 10, 0, 10]
+                },
+                {
+                    nombre: 'Luis',
+                    notas: Array(20).fill(10)
+                },
+                {
+                    nombre: 'María',
+                    notas: [0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0]
+                },
+                {
+                    nombre: 'Jorge',
+                    notas: [8, 7, 10, 9, 6, 10, 10, 5, 7, 9, 10, 8, 6, 10, 7, 10, 9, 10, 8, 10]
+                },
+                {
+                    nombre: 'Camila',
+                    notas: [10, 10, 9, 10, 10, 10, 9, 10, 10, 10, 10, 9, 10, 10, 10, 9, 10, 10, 10, 10]
+                }
+            ];
+
+            let mensaje = '📨 Enviando 5 alumnos con notas por página a Google Sheets:\n\n';
+
+            for (const estudiante of estudiantes) {
+                limpiarDatos();
+                guardarEstudiante('2026', estudiante.nombre, grado);
+                simularPaginasNotas(estudiante.notas);
+                localStorage.setItem(STORAGE_KEYS.resultadoEnviado, 'false');
+
+                const enviado = await enviarResultados();
+                const datos = obtenerEstudiante();
+                mensaje += estudiante.nombre + ': ' + datos.puntaje + ' pts → ' + (enviado ? '✓ ENVIADO' : '✗ ERROR') + '\n';
+                mensaje += '  Pages: ' + estudiante.notas.join(', ') + '\n\n';
+            }
+
+            mostrarOutput('output2', mensaje, 'success');
+        }
+        
+        function mostrarUltimoPayload() {
+            const payload = window.lastPayloadEnviado || JSON.parse(localStorage.getItem('ultimo_payload_enviado') || '{}');
+            if (!payload || Object.keys(payload).length === 0) {
+                mostrarOutput('output1', '⚠️ No se encontró payload enviado en esta sesión.', 'warning');
+                return;
+            }
+            mostrarOutput('output1', '📦 Último payload enviado:\n\n' + JSON.stringify(payload, null, 2), 'info');
+        }
+        
+        function limpiarTodos() {
+            // Mostrar primer modal de confirmación
+            document.getElementById('modalLimpiarConfirmacion1').style.display = 'flex';
+        }
+        
+        function confirmarLimpiarPaso1() {
+            document.getElementById('modalLimpiarConfirmacion1').style.display = 'none';
+            // Mostrar segundo modal
+            document.getElementById('modalLimpiarConfirmacion2').style.display = 'flex';
+        }
+        
+        function cancelarLimpiar(paso = 1) {
+            document.getElementById('modalLimpiarConfirmacion' + paso).style.display = 'none';
+        }
+        
+        function confirmarLimpiarFinal() {
+            document.getElementById('modalLimpiarConfirmacion2').style.display = 'none';
+            
+            mostrarOutput('output3', '⏳ Limpiando datos... Por favor espera...', 'info');
+            
+            // Guardar cantidad antes de limpiar
+            const cantidadAntes = localStorage.length;
+            
+            // Limpiar localStorage y sessionStorage
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            // Construir la solicitud para limpiar Google Sheets
+            const datosLimpiar = {
+                accion: "limpiar"
+            };
+            
+            // Llamar al Google Apps Script para limpiar
+            fetch(API_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosLimpiar)
+            })
+            .then(() => {
+                // Mostrar resumen
+                let mensaje = '✅ LIMPIEZA COMPLETADA\n\n';
+                mensaje += '═══════════════════════════════════\n';
+                mensaje += '📱 LocalStorage:\n';
+                mensaje += '   Elementos eliminados: ' + cantidadAntes + '\n';
+                mensaje += '   Estado: VACÍO\n\n';
+                mensaje += '☁️ Google Sheets:\n';
+                mensaje += '   Todos los registros eliminados\n';
+                mensaje += '   Estado: LIMPIO\n\n';
+                mensaje += '═══════════════════════════════════\n';
+                mensaje += '✓ El sistema está listo para empezar de nuevo';
+                
+                mostrarOutput('output3', mensaje, 'success');
+                
+                // Reload después de 3 segundos
+                setTimeout(() => {
+                    location.reload();
+                }, 3000);
+            })
+            .catch((error) => {
+                // Si hay error, mostrar
+                let mensaje = '⚠️ Error parcial en limpieza\n\n';
+                mensaje += 'LocalStorage: ✅ LIMPIO\n';
+                mensaje += 'Google Sheets: ⚠️ No se pudo conectar\n\n';
+                mensaje += 'Error: ' + error.message + '\n';
+                mensaje += 'Verifica que API_URL esté correcto';
+                
+                mostrarOutput('output3', mensaje, 'warning');
+            });
+        }
+        
+        function mostrarLocalStorage() {
+            let contenido = '💾 Contenido de LocalStorage:\n\n';
+            if (localStorage.length === 0) {
+                contenido = '⚠️ LocalStorage está vacío';
+            } else {
+                contenido += 'Total de elementos: ' + localStorage.length + '\n\n';
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    const value = localStorage.getItem(key);
+                    contenido += key + ':\n' + value + '\n\n';
+                }
+            }
+            mostrarOutput('output3', contenido, 'info');
+        }
+
+        window.addEventListener('load', function() {
+            let advertencia = '';
+            
+            if (API_URL === "PEGAR_AQUI_URL_DE_GOOGLE_APPS_SCRIPT") {
+                advertencia = '⚠️ ADVERTENCIA: URL de Google Apps Script no configurada.\n' +
+                             'Edita registro.js y agrega tu URL.\n' +
+                             'Lee GUIA_GOOGLE_APPS_SCRIPT.txt para instrucciones.';
+            }
+            
+            if (advertencia) {
+                alert(advertencia);
+            }
+        });
+    </script>
+</body>
+</html>

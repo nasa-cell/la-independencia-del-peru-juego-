@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>La Batalla de Ayacucho — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>La Batalla de Ayacucho</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-celeste">
+            <h2 class="titulo-heroe">La Batalla de Ayacucho - Parte III</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/xpWR0P2XZps?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-ayacucho">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué fecha se libró la Batalla de Ayacucho?</p>
+                    <label><input type="radio" name="ayacucho-p1" value="a"> 28 de julio de 1821</label>
+                    <label><input type="radio" name="ayacucho-p1" value="b"> 6 de agosto de 1824</label>
+                    <label><input type="radio" name="ayacucho-p1" value="c"> 9 de diciembre de 1824</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Dónde se desplegaron los ejércitos?</p>
+                    <label><input type="radio" name="ayacucho-p2" value="a"> Pampa de la Quinua</label>
+                    <label><input type="radio" name="ayacucho-p2" value="b"> Cañón del Colca</label>
+                    <label><input type="radio" name="ayacucho-p2" value="c"> Valle del Mantaro</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Quién mandó el Ejército Unido Libertador?</p>
+                    <label><input type="radio" name="ayacucho-p3" value="a"> Antonio José de Sucre</label>
+                    <label><input type="radio" name="ayacucho-p3" value="b"> José de San Martín</label>
+                    <label><input type="radio" name="ayacucho-p3" value="c"> Simón Bolívar</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Quién era el general realista prisionero?</p>
+                    <label><input type="radio" name="ayacucho-p4" value="a"> José de la Serna</label>
+                    <label><input type="radio" name="ayacucho-p4" value="b"> José de Canterac</label>
+                    <label><input type="radio" name="ayacucho-p4" value="c"> Rodil</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué documento se firmó en el campo de batalla?</p>
+                    <label><input type="radio" name="ayacucho-p5" value="a"> Tratado de Ancón</label>
+                    <label><input type="radio" name="ayacucho-p5" value="b"> Capitulación de Ayacucho</label>
+                    <label><input type="radio" name="ayacucho-p5" value="c"> Acta de Libre Comercio</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué beneficios recibió el ejército español?</p>
+                    <label><input type="radio" name="ayacucho-p6" value="a"> Prisión perpetua</label>
+                    <label><input type="radio" name="ayacucho-p6" value="b"> Retorno con respeto y pago de pasajes</label>
+                    <label><input type="radio" name="ayacucho-p6" value="c"> Integrarse al ejército peruano</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué arenga pronunció Sucre?</p>
+                    <label><input type="radio" name="ayacucho-p7" value="a"> "De los esfuerzos de hoy depende la suerte..."</label>
+                    <label><input type="radio" name="ayacucho-p7" value="b"> "Tengo deberes sagrados..."</label>
+                    <label><input type="radio" name="ayacucho-p7" value="c"> "¡Viva el Rey y la patria independiente!"</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué tropas integraban el ejército?</p>
+                    <label><input type="radio" name="ayacucho-p8" value="a"> Peruanos, colombianos, venezolanos, ecuatorianos, argentinos y chilenos</label>
+                    <label><input type="radio" name="ayacucho-p8" value="b"> Tropas de Asia y África</label>
+                    <label><input type="radio" name="ayacucho-p8" value="c"> Solo voluntarios limeños</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué estructura conmemora Ayacucho?</p>
+                    <label><input type="radio" name="ayacucho-p9" value="a"> Réplica de un templo inca</label>
+                    <label><input type="radio" name="ayacucho-p9" value="b"> Obelisco de la Pampa de Ayacucho</label>
+                    <label><input type="radio" name="ayacucho-p9" value="c"> Estatua ecuestre</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Por qué tiene trascendencia mundial?</p>
+                    <label><input type="radio" name="ayacucho-p10" value="a"> Derrumbe del imperio español en Sudamérica</label>
+                    <label><input type="radio" name="ayacucho-p10" value="b"> Inicio de la explotación del guano</label>
+                    <label><input type="radio" name="ayacucho-p10" value="c"> Primera batalla por telégrafo</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-ayacucho', ['b','a','a','a','a','b','a','a','b','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page19.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="index.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

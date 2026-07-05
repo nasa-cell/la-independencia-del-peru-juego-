@@ -1,0 +1,218 @@
+================================================================================
+GUÍA: CONFIGURAR GOOGLE APPS SCRIPT PARA RECIBIR DATOS
+================================================================================
+
+PASO 1: CREAR UN NUEVO PROYECTO EN GOOGLE APPS SCRIPT
+================================================================================
+
+1. Ve a: https://script.google.com/
+2. Haz clic en "Nuevo proyecto"
+3. Dale un nombre, ej: "Hatun Aventuras - Registro de Resultados"
+4. Haz clic en "Crear"
+
+
+PASO 2: COPIAR EL CÓDIGO DE GOOGLE APPS SCRIPT
+================================================================================
+
+1. En el editor de Apps Script, reemplaza todo el contenido con el código debajo
+2. Copia TODO el código siguiente:
+
+---INICIO DEL CÓDIGO---
+
+// Reemplaza estos valores con los de tu hoja de cálculo
+const SPREADSHEET_ID = "PEGAR_AQUI_ID_DE_GOOGLE_SHEETS";
+const SHEET_NAME = "Resultados"; // Nombre de la pestaña en Google Sheets
+
+function parseIncomingPayload(e) {
+  if (e.postData && e.postData.contents) {
+    try {
+      return JSON.parse(e.postData.contents);
+    } catch (error) {
+      // Si no es JSON, se intenta leer parámetros de formulario
+    }
+  }
+
+  const datos = {};
+  if (e.parameter) {
+    Object.entries(e.parameter).forEach(([key, value]) => {
+      datos[key] = Array.isArray(value) ? value[0] : value;
+    });
+  }
+  return datos;
+}
+
+function doPost(e) {
+  try {
+    const datos = parseIncomingPayload(e);
+    
+    // Agregar fecha actual
+    const fecha = new Date().toLocaleDateString('es-ES');
+    
+    // Obtener la hoja
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    const sheet = ss.getSheetByName(SHEET_NAME);
+    
+    // Agregar fila con los datos
+    sheet.appendRow([
+      fecha,                    // A: Fecha
+      datos.codigo || "",       // B: Código
+      datos.nombre || "",       // C: Alumno
+      datos.grado || "",        // D: Grado
+      datos.Page1 || 0,           // E: Page1
+      datos.Page2 || 0,           // F: Page2
+      datos.Page3 || 0,           // G: Page3
+      datos.Page4 || 0,           // H: Page4
+      datos.Page5 || 0,           // I: Page5
+      datos.Page6 || 0,           // J: Page6
+      datos.Page7 || 0,           // K: Page7
+      datos.Page8 || 0,           // L: Page8
+      datos.Page9 || 0,           // M: Page9
+      datos.Page10 || 0,          // N: Page10
+      datos.Page11 || 0,          // O: Page11
+      datos.Page12 || 0,          // P: Page12
+      datos.Page13 || 0,          // Q: Page13
+      datos.Page14 || 0,          // R: Page14
+      datos.Page15 || 0,          // S: Page15
+      datos.Page16 || 0,          // T: Page16
+      datos.Page17 || 0,          // U: Page17
+      datos.Page18 || 0,          // V: Page18
+      datos.Page19 || 0,          // W: Page19
+      datos.Page20 || 0,          // X: Page20
+      datos.NotaFinal || "",     // Y: NotaFinal
+      datos.Estado || ""         // Z: Estado
+    ]);
+    
+    // Retornar respuesta exitosa
+    return ContentService.createTextOutput(JSON.stringify({
+      success: true,
+      message: "Datos guardados correctamente"
+    })).setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({
+      success: false,
+      message: "Error: " + error.toString()
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+---FIN DEL CÓDIGO---
+
+3. Reemplaza "PEGAR_AQUI_ID_DE_GOOGLE_SHEETS" con el ID de tu Google Sheets
+   (El ID está en la URL: https://docs.google.com/spreadsheets/d/[ID]/edit)
+
+
+PASO 3: DESPLEGAR COMO APLICACIÓN WEB
+================================================================================
+
+1. Haz clic en "Implementar" (arriba a la derecha)
+2. Selecciona "Nueva implementación"
+3. Tipo: "Aplicación web"
+4. Ejecutar como: [Tu correo de Gmail]
+5. Quién tiene acceso: "Cualquiera"
+6. Haz clic en "Implementar"
+7. Se abrirá una ventana de autorización:
+   - Haz clic en tu cuenta de Google
+   - Haz clic en "Permitir" en la advertencia de seguridad
+8. COPIA LA URL DE IMPLEMENTACIÓN (se vería así):
+   https://script.google.com/macros/d/[ID_LARGO]/usercontent
+
+ESTA ES LA URL QUE NECESITAS
+
+
+PASO 4: AGREGAR LA URL A TU CÓDIGO HTML
+================================================================================
+
+En el archivo registro.js, busca esta línea:
+
+const API_URL = "PEGAR_AQUI_URL_DE_GOOGLE_APPS_SCRIPT";
+
+Y reemplázala con:
+
+const API_URL = "https://script.google.com/macros/d/[ID_LARGO]/usercontent";
+
+(Pega la URL completa que copiaste en el PASO 3)
+
+
+PASO 5: VERIFICAR QUE FUNCIONA
+================================================================================
+
+1. Abre tu página de registro
+2. Completa el formulario y comienza el juego
+3. Completa una actividad y obtén respuestas correctas
+4. Termina todas las actividades para ver la pantalla final
+5. Haz clic en "📨 Enviar resultados al profesor"
+6. Verifica en tu Google Sheets si aparece la fila con los datos
+
+
+ESTRUCTURA DE GOOGLE SHEETS
+================================================================================
+
+Tu Google Sheets debe tener las siguientes columnas:
+
+A: Fecha          (Ej: 04/7/2026)
+B: Código         (Ej: 2026)
+C: Alumno         (Ej: Juan Pérez)
+D: Grado          (Ej: 5to Primaria)
+E: Page1          (Ej: 10)
+F: Page2          (Ej: 0)
+G: Page3          (Ej: 10)
+H: Page4          (Ej: 10)
+I: Page5          (Ej: 0)
+J: Page6          (Ej: 10)
+K: Page7          (Ej: 10)
+L: Page8          (Ej: 10)
+M: Page9          (Ej: 10)
+N: Page10         (Ej: 10)
+O: Page11         (Ej: 10)
+P: Page12         (Ej: 10)
+Q: Page13         (Ej: 10)
+R: Page14         (Ej: 10)
+S: Page15         (Ej: 10)
+T: Page16         (Ej: 10)
+U: Page17         (Ej: 10)
+V: Page18         (Ej: 10)
+W: Page19         (Ej: 10)
+X: Page20         (Ej: 10)
+Y: NotaFinal      (Ej: 170)
+Z: Estado         (Ej: Completado)
+
+
+SOLUCIONAR PROBLEMAS
+================================================================================
+
+❌ ERROR: "No se pueden enviar los datos"
+   → Verifica que hayas reemplazado el SPREADSHEET_ID correcto
+   → Verifica que el nombre de la pestaña sea "Resultados"
+   → Asegúrate de que el Apps Script tiene acceso a tu Google Sheets
+
+❌ ERROR: "Error al procesar solicitud"
+   → Vuelve a desplegar el Apps Script (Paso 3)
+   → Asegúrate de haber autorizado la aplicación
+
+❌ ERROR: "No se reciben los datos"
+   → Verifica que API_URL esté correcta en registro.js
+   → Abre la consola del navegador (F12) y busca errores
+   → Verifica que los datos se estén guardando en localStorage primero
+
+
+NOTAS IMPORTANTES
+================================================================================
+
+• El código de aula es: 2026
+• Cada actividad correcta suma 10 puntos
+• Se registran máximo 20 actividades (páginas del 1 al 20)
+• Los datos se envían al hacer clic en la página final
+• Los datos se guardan en localStorage incluso sin internet
+
+
+SOPORTE
+================================================================================
+
+Si tienes problemas:
+1. Verifica la consola del navegador (F12 → Consola)
+2. Revisa que Google Sheets esté compartido correctamente
+3. Asegúrate de que el Apps Script esté bien desplegado
+4. Prueba con un usuario diferente para descartar caché del navegador
+
+================================================================================

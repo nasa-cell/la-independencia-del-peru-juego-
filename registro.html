@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#CE1126">
+    <meta name="description" content="Juego educativo sobre la independencia del Perú">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Registro - Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="bandera.css">
+</head>
+<body>
+    <div class="decoration decoration-1">🇵🇪</div>
+    <div class="decoration decoration-2">⭐</div>
+
+    <div class="registro-container">
+        <div class="registro-header">
+            <span class="bandera-emoji">🇵🇪</span>
+            <h1>Hatun Aventuras</h1>
+            <p>¡Bienvenido a la aventura patriótica!</p>
+        </div>
+
+        <form class="registro-form" id="formularioRegistro">
+            <div class="form-group">
+                <label for="codigo">🔐 Código del Aula:</label>
+                <input 
+                    type="text" 
+                    id="codigo" 
+                    placeholder="Ingresa el código" 
+                    maxlength="10"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">👤 Tu Nombre:</label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    placeholder="Ej: Juan Pérez" 
+                    maxlength="50"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="grado">📚 Tu Grado:</label>
+                <select id="grado" required>
+                    <option value="">-- Selecciona tu grado --</option>
+                    <option value="1ro Primaria">1ro Primaria</option>
+                    <option value="2do Primaria">2do Primaria</option>
+                    <option value="3ro Primaria">3ro Primaria</option>
+                    <option value="4to Primaria">4to Primaria</option>
+                    <option value="5to Primaria">5to Primaria</option>
+                    <option value="6to Primaria">6to Primaria</option>
+                </select>
+            </div>
+
+            <div class="error-message" id="mensajeError"></div>
+
+            <div class="btn-container">
+                <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">🔄 Limpiar</button>
+                <button type="submit" class="btn btn-primary">🎮 ¡Comenzar Aventura!</button>
+            </div>
+
+            <div class="profesor-btn-container">
+                <button type="button" class="btn btn-profesor" onclick="abrirLoginProfesor()">👨‍🏫 PROFESOR</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Login Profesor -->
+    <div id="modalProfesor" class="modal-profesor" style="display: none;">
+        <div class="modal-profesor-content">
+            <div class="modal-profesor-header">
+                <h2>🔒 Acceso Profesor</h2>
+                <button type="button" class="modal-close" onclick="cerrarLoginProfesor()">✕</button>
+            </div>
+            
+            <div class="modal-profesor-body">
+                <p>Ingresa la contraseña para acceder al panel de pruebas:</p>
+                <input 
+                    type="password" 
+                    id="passwordProfesor" 
+                    class="input-password" 
+                    placeholder="Contraseña"
+                    autocomplete="off"
+                >
+                <div class="error-message-profesor" id="mensajeErrorProfesor"></div>
+            </div>
+            
+            <div class="modal-profesor-footer">
+                <button type="button" class="btn btn-secondary" onclick="cerrarLoginProfesor()">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="verificarContraseña()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="registro.js"></script>
+    <script>
+        // Manejo del Formulario
+        document.getElementById('formularioRegistro').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const codigo = document.getElementById('codigo').value.trim();
+            const nombre = document.getElementById('nombre').value.trim();
+            const grado = document.getElementById('grado').value.trim();
+            const mensajeError = document.getElementById('mensajeError');
+            
+            // Validaciones
+            if (!codigo) {
+                mostrarError('Por favor ingresa el código del aula.');
+                return;
+            }
+            
+            if (!nombre) {
+                mostrarError('Por favor ingresa tu nombre.');
+                return;
+            }
+            
+            if (!grado) {
+                mostrarError('Por favor selecciona tu grado.');
+                return;
+            }
+            
+            if (!validarCodigo(codigo)) {
+                mostrarError('❌ Código incorrecto. Por favor verifica con tu profesor.');
+                return;
+            }
+            
+            // Guardar datos
+            guardarEstudiante(codigo, nombre, grado);
+            
+            // Ocultar error
+            mensajeError.classList.remove('show');
+            
+            // Redirigir al juego
+            window.location.href = 'index.html';
+        });
+        
+        function mostrarError(mensaje) {
+            const mensajeError = document.getElementById('mensajeError');
+            mensajeError.textContent = mensaje;
+            mensajeError.classList.add('show');
+        }
+        
+        function limpiarFormulario() {
+            document.getElementById('formularioRegistro').reset();
+            document.getElementById('mensajeError').classList.remove('show');
+        }
+        
+        // ============================================
+        // FUNCIONES PARA LOGIN DE PROFESOR
+        // ============================================
+        function abrirLoginProfesor() {
+            const modal = document.getElementById('modalProfesor');
+            const passwordInput = document.getElementById('passwordProfesor');
+            const errorDiv = document.getElementById('mensajeErrorProfesor');
+            
+            modal.style.display = 'flex';
+            passwordInput.value = '';
+            errorDiv.textContent = '';
+            
+            // Focus en el input de contraseña
+            setTimeout(() => passwordInput.focus(), 100);
+            
+            // Permitir Enter para enviar
+            passwordInput.onkeypress = function(e) {
+                if (e.key === 'Enter') {
+                    verificarContraseña();
+                }
+            };
+        }
+        
+        function cerrarLoginProfesor() {
+            const modal = document.getElementById('modalProfesor');
+            modal.style.display = 'none';
+            document.getElementById('passwordProfesor').value = '';
+            document.getElementById('mensajeErrorProfesor').textContent = '';
+        }
+        
+        function verificarContraseña() {
+            const password = document.getElementById('passwordProfesor').value;
+            const errorDiv = document.getElementById('mensajeErrorProfesor');
+            const CONTRASEÑA_CORRECTA = 'profesor2026';
+            
+            if (password === CONTRASEÑA_CORRECTA) {
+                // Guardar autenticación de profesor
+                localStorage.setItem('profesorAutenticado', 'true');
+                errorDiv.textContent = '';
+                
+                // Redirigir a testing
+                window.location.href = 'testing.html';
+            } else {
+                errorDiv.textContent = '❌ Contraseña incorrecta';
+                document.getElementById('passwordProfesor').value = '';
+            }
+        }
+        
+        // Cerrar modal al hacer click fuera
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('modalProfesor');
+            if (e.target === modal) {
+                cerrarLoginProfesor();
+            }
+        });
+        
+        // Verificar si ya hay estudiante registrado
+        window.addEventListener('load', function() {
+            if (existeEstudiante() && !localStorage.getItem('estudiante_resultado_enviado')) {
+                // Si hay estudiante y no ha finalizado, ir directamente al juego
+                const estudiante = obtenerEstudiante();
+                if (estudiante.nombre) {
+                    window.location.href = 'index.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

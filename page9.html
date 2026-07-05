@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>José Abelardo Quiñones — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>José Abelardo Quiñones</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-amarillo">
+            <h2 class="titulo-heroe">José Abelardo Quiñones - Aviador Heroico</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/zC0glXQkm-c?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-quinones">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué rama sirvió José Abelardo Quiñones?</p>
+                    <label><input type="radio" name="bolivar2-p1" value="a"> Marina de Guerra</label>
+                    <label><input type="radio" name="bolivar2-p1" value="b"> Ejército</label>
+                    <label><input type="radio" name="bolivar2-p1" value="c"> Fuerza Aérea</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Qué acrobacia hizo en su graduación?</p>
+                    <label><input type="radio" name="bolivar2-p2" value="a"> Planeo sin motores</label>
+                    <label><input type="radio" name="bolivar2-p2" value="b"> Volar invertido rozando la pista</label>
+                    <label><input type="radio" name="bolivar2-p2" value="c"> Saltar en paracaídas</label>
+                </div>
+                <div class="pregunta"><p>3. ¿En qué conflicto demostró su valor?</p>
+                    <label><input type="radio" name="bolivar2-p3" value="a"> Conflicto Perú-Ecuador de 1941</label>
+                    <label><input type="radio" name="bolivar2-p3" value="b"> Guerra del Pacífico</label>
+                    <label><input type="radio" name="bolivar2-p3" value="c"> Primera Guerra Mundial</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué avión pilotaba?</p>
+                    <label><input type="radio" name="bolivar2-p4" value="a"> Monitor de aire II</label>
+                    <label><input type="radio" name="bolivar2-p4" value="b"> North American NA-50 "Torito"</label>
+                    <label><input type="radio" name="bolivar2-p4" value="c"> Boeing bomber</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué le pasó en la misión?</p>
+                    <label><input type="radio" name="bolivar2-p5" value="a"> Falla de combustible</label>
+                    <label><input type="radio" name="bolivar2-p5" value="b"> Impactado por la artillería</label>
+                    <label><input type="radio" name="bolivar2-p5" value="c"> Chocó con aves</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué decisión tomó en lugar del paracaídas?</p>
+                    <label><input type="radio" name="bolivar2-p6" value="a"> Enrumbar hacia posiciones enemigas</label>
+                    <label><input type="radio" name="bolivar2-p6" value="b"> Intentar aterrizaje forzoso</label>
+                    <label><input type="radio" name="bolivar2-p6" value="c"> Buscar refugio</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué fecha es el Día de la Fuerza Aérea del Perú?</p>
+                    <label><input type="radio" name="bolivar2-p7" value="a"> 7 de junio</label>
+                    <label><input type="radio" name="bolivar2-p7" value="b"> 23 de julio</label>
+                    <label><input type="radio" name="bolivar2-p7" value="c"> 8 de octubre</label>
+                </div>
+                <div class="pregunta"><p>8. ¿De qué departamento era originario?</p>
+                    <label><input type="radio" name="bolivar2-p8" value="a"> Lambayeque</label>
+                    <label><input type="radio" name="bolivar2-p8" value="b"> Tumbes</label>
+                    <label><input type="radio" name="bolivar2-p8" value="c"> Piura</label>
+                </div>
+                <div class="pregunta"><p>9. ¿En qué billete aparece su efigie?</p>
+                    <label><input type="radio" name="bolivar2-p9" value="a"> 10 Soles</label>
+                    <label><input type="radio" name="bolivar2-p9" value="b"> 100 Soles</label>
+                    <label><input type="radio" name="bolivar2-p9" value="c"> 50 Soles</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué significado tiene Quiñones?</p>
+                    <label><input type="radio" name="bolivar2-p10" value="a"> Audacia, desprendimiento y sacrificio</label>
+                    <label><input type="radio" name="bolivar2-p10" value="b"> Apego al reglamento pasivo</label>
+                    <label><input type="radio" name="bolivar2-p10" value="c"> Destreza comercial</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-quinones', ['c','b','a','b','b','a','b','a','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page8.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page10.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

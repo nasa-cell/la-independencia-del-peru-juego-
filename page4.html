@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>María Parado de Bellido — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>María Parado de Bellido</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-amarillo">
+            <h2 class="titulo-heroe">María Parado de Bellido - Heroína Patriota</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/s1tNJpaNB8I?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-bellido">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué región nació y actuó María Parado de Bellido?</p>
+                    <label><input type="radio" name="parado-p1" value="a"> Puno</label>
+                    <label><input type="radio" name="parado-p1" value="b"> Ayacucho</label>
+                    <label><input type="radio" name="parado-p1" value="c"> Cajamarca</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Cómo cooperaba con las guerrillas patriotas?</p>
+                    <label><input type="radio" name="parado-p2" value="a"> Fabricando pólvora</label>
+                    <label><input type="radio" name="parado-p2" value="b"> Enviando cartas informativas</label>
+                    <label><input type="radio" name="parado-p2" value="c"> Ocultando caballos</label>
+                </div>
+                <div class="pregunta"><p>3. Como no sabía escribir, ¿cómo redactaba la información?</p>
+                    <label><input type="radio" name="parado-p3" value="a"> Con jeroglíficos</label>
+                    <label><input type="radio" name="parado-p3" value="b"> Dictando a un amigo de confianza</label>
+                    <label><input type="radio" name="parado-p3" value="c"> Enviando señales de humo</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Quién ordenó su persecución, captura y ejecución?</p>
+                    <label><input type="radio" name="parado-p4" value="a"> José de Canterac</label>
+                    <label><input type="radio" name="parado-p4" value="b"> José Carratalá</label>
+                    <label><input type="radio" name="parado-p4" value="c"> Virrey La Serna</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Por qué la sentenciaron al fusilamiento?</p>
+                    <label><input type="radio" name="parado-p5" value="a"> Por robar planos</label>
+                    <label><input type="radio" name="parado-p5" value="b"> Por negarse a delatar a los patriotas</label>
+                    <label><input type="radio" name="parado-p5" value="c"> Por intentar salir del país</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué familiares combatían con los patriotas?</p>
+                    <label><input type="radio" name="parado-p6" value="a"> Su esposo y sus hijos</label>
+                    <label><input type="radio" name="parado-p6" value="b"> Sus tíos maternos</label>
+                    <label><input type="radio" name="parado-p6" value="c"> Ninguno</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué temple mostró ante el pelotón?</p>
+                    <label><input type="radio" name="parado-p7" value="a"> Imploró perdón</label>
+                    <label><input type="radio" name="parado-p7" value="b"> Mantuvo dignidad y serenidad</label>
+                    <label><input type="radio" name="parado-p7" value="c"> Intentó huir</label>
+                </div>
+                <div class="pregunta"><p>8. ¿A qué guerrilla enviaba cartas?</p>
+                    <label><input type="radio" name="parado-p8" value="a"> San Martín en Lima</label>
+                    <label><input type="radio" name="parado-p8" value="b"> Guerrillas de Cayetano Quirós</label>
+                    <label><input type="radio" name="parado-p8" value="c"> Tropas del norte de Bolívar</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Cómo se la reconoce en la historia del Perú?</p>
+                    <label><input type="radio" name="parado-p9" value="a"> Heroína y mártir de la emancipación</label>
+                    <label><input type="radio" name="parado-p9" value="b"> Primera mujer en el congreso</label>
+                    <label><input type="radio" name="parado-p9" value="c"> Diseñadora textil</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Cuál es el mensaje cívico de su vida?</p>
+                    <label><input type="radio" name="parado-p10" value="a"> La traición es fácil</label>
+                    <label><input type="radio" name="parado-p10" value="b"> La libertad exige lealtad y entrega moral</label>
+                    <label><input type="radio" name="parado-p10" value="c"> Mejor mantenerse al margen</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-bellido', ['b','b','a','b','b','a','b','a','a','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page3.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page5.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

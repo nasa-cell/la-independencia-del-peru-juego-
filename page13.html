@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alfonso Ugarte — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Alfonso Ugarte</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-verde">
+            <h2 class="titulo-heroe">Alfonso Ugarte</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/XEn8r8sfmFA?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-ugarte">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Qué cargo tenía Alfonso Ugarte en la Batalla de Arica?</p>
+                    <label><input type="radio" name="ugarte-p1" value="a"> Comandante General</label>
+                    <label><input type="radio" name="ugarte-p1" value="b"> Coronel</label>
+                    <label><input type="radio" name="ugarte-p1" value="c"> Subteniente médico</label>
+                </div>
+                <div class="pregunta"><p>2. ¿A qué actividad se dedicaba antes de la guerra?</p>
+                    <label><input type="radio" name="ugarte-p2" value="a"> Empresario salitrero</label>
+                    <label><input type="radio" name="ugarte-p2" value="b"> Pescador</label>
+                    <label><input type="radio" name="ugarte-p2" value="c"> Funcionario aduanero</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué hizo con su fortuna al iniciar la guerra?</p>
+                    <label><input type="radio" name="ugarte-p3" value="a"> Financió un batallón</label>
+                    <label><input type="radio" name="ugarte-p3" value="b"> Viajó a Europa</label>
+                    <label><input type="radio" name="ugarte-p3" value="c"> Compró tierras</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué acto heroico consumó al caer rodeado?</p>
+                    <label><input type="radio" name="ugarte-p4" value="a"> Entregó su espada</label>
+                    <label><input type="radio" name="ugarte-p4" value="b"> Saltó al mar con la bandera</label>
+                    <label><input type="radio" name="ugarte-p4" value="c"> Se ocultó</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué símbolo rescató con su sacrificio?</p>
+                    <label><input type="radio" name="ugarte-p5" value="a"> Escudo</label>
+                    <label><input type="radio" name="ugarte-p5" value="b"> Bandera</label>
+                    <label><input type="radio" name="ugarte-p5" value="c"> Libro de Oro</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Cómo murió?</p>
+                    <label><input type="radio" name="ugarte-p6" value="a"> En combate</label>
+                    <label><input type="radio" name="ugarte-p6" value="b"> En exilio</label>
+                    <label><input type="radio" name="ugarte-p6" value="c"> En prisión</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué opción rechazó?</p>
+                    <label><input type="radio" name="ugarte-p7" value="a"> Destierro voluntario</label>
+                    <label><input type="radio" name="ugarte-p7" value="b"> Comodidad y capitulación</label>
+                    <label><input type="radio" name="ugarte-p7" value="c"> Cambiar de nacionalidad</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué fecha conmemora su memoria?</p>
+                    <label><input type="radio" name="ugarte-p8" value="a"> 7 de junio</label>
+                    <label><input type="radio" name="ugarte-p8" value="b"> 28 de julio</label>
+                    <label><input type="radio" name="ugarte-p8" value="c"> 8 de octubre</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Cuál es su mensaje?</p>
+                    <label><input type="radio" name="ugarte-p9" value="a"> Sacrificio por la patria</label>
+                    <label><input type="radio" name="ugarte-p9" value="b"> Política</label>
+                    <label><input type="radio" name="ugarte-p9" value="c"> Diplomacia</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué evento conmemora su acto?</p>
+                    <label><input type="radio" name="ugarte-p10" value="a"> Combate del 2 de Mayo</label>
+                    <label><input type="radio" name="ugarte-p10" value="b"> Angamos</label>
+                    <label><input type="radio" name="ugarte-p10" value="c"> Junín</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-ugarte', ['b','a','b','b','a','a','a','b','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page12.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page14.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

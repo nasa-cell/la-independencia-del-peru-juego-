@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#CE1126">
+    <meta name="description" content="Juego educativo sobre la independencia del Perú">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Hatun Aventuras Heroicas - Índice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bandera.css">
+    <style>
+        .student-info {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.80));
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        .student-name {
+            font-weight: 800;
+            color: #D21F26;
+            font-size: 20px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        .student-stats {
+            display: flex;
+            gap: 22px;
+            font-size: 14px;
+            color: #444;
+        }
+        .student-stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.8);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+        .student-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-logout,
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #CE1126, #FF4A3D);
+            color: #fff;
+            border: none;
+            padding: 11px 18px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+            box-shadow: 0 10px 20px rgba(206,17,38,0.18);
+        }
+        .btn-logout:hover,
+        .btn-action:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #FF4A3D, #D21F26);
+            box-shadow: 0 14px 25px rgba(206,17,38,0.24);
+        }
+        .btn-logout:active,
+        .btn-action:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 16px rgba(206,17,38,0.18);
+        }
+    </style>
+</head>
+<body>
+    <header class="header-hero">
+        <h1>🇵🇪 Hatun Aventuras Heroicas</h1>
+        <p>Elige una parte para ver los videos y responder las trivias.</p>
+        <div class="student-info" id="studentInfo" style="display: none;">
+            <div>
+                <span class="student-name" id="studentName">-</span>
+                <div class="student-stats">
+                    <span>📚 <span id="studentGrade">-</span></span>
+                    <span>🎯 <span id="studentScore">-</span> pts</span>
+                    <span>✅ <span id="studentActivities">-</span>/20</span>
+                </div>
+            </div>
+            <div class="student-actions">
+                <button class="btn-logout" onclick="confirmarLogout()">🚪 Cambiar estudiante</button>
+                <button class="btn-action" onclick="irAFinalEnviarTodo()">📤 Ir a final y enviar todo</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="seccion-heroe seccion-azul">
+            <h2 class="titulo-heroe">📚 Índice de Lecciones</h2>
+            <div class="grid-index">
+                <a class="card" href="page1.html">Miguel Grau - Caballero de los Mares</a>
+                <a class="card" href="page2.html">Túpac Amaru II - Héroe de la Rebelión</a>
+                <a class="card" href="page3.html">José Olaya - Héroe Anónimo</a>
+                <a class="card" href="page4.html">María Parado de Bellido - Heroína Patriota</a>
+                <a class="card" href="page5.html">José de San Martín - Protector de la Independencia</a>
+                <a class="card" href="page6.html">Simón Bolívar - El Libertador</a>
+                <a class="card" href="page7.html">Francisco Bolognesi - Héroe de Arica</a>
+                <a class="card" href="page8.html">Everardo Zapata - Educador</a>
+                <a class="card" href="page9.html">José Abelardo Quiñones - Aviador Heroico</a>
+                <a class="card" href="page10.html">Ramón Castilla - Abolidor de la Esclavitud</a>
+                <a class="card" href="page11.html">Micaela Bastidas - Compañera de Túpac Amaru II</a>
+                <a class="card" href="page12.html">Andrés Avelino Cáceres</a>
+                <a class="card" href="page13.html">Alfonso Ugarte</a>
+                <a class="card" href="page14.html">Combate del 2 de Mayo</a>
+                <a class="card" href="page15.html">La Independencia del Perú</a>
+                <a class="card" href="page16.html">La Batalla de Junín</a>
+                <a class="card" href="page17.html">El Himno Nacional - Parte I</a>
+                <a class="card" href="page18.html">El Himno Nacional - Parte II</a>
+                <a class="card" href="page19.html">El Combate de Angamos</a>
+                <a class="card" href="page20.html">La Batalla de Ayacucho</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Hatun Aventuras Heroicas. ¡Homenaje a los grandes constructores de nuestra patria!</p>
+    </footer>
+
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Función para actualizar información del estudiante
+        function actualizarInfoEstudiante() {
+            try {
+                const est = obtenerEstudiante();
+                if (est && est.nombre) {
+                    document.getElementById('studentScore').textContent = est.puntaje || '0';
+                    document.getElementById('studentActivities').textContent = est.actividades || '0';
+                    console.log('✓ Info actualizada: ' + est.puntaje + ' pts, ' + est.actividades + ' actividades');
+                }
+            } catch(e) {
+                console.error('Error actualizando info:', e);
+            }
+        }
+        
+        // Verificar si hay estudiante registrado
+        window.addEventListener('load', function() {
+            if (!existeEstudiante()) {
+                window.location.href = 'registro.html';
+                return;
+            }
+            
+            // Mostrar información del estudiante
+            const estudiante = obtenerEstudiante();
+            document.getElementById('studentInfo').style.display = 'flex';
+            document.getElementById('studentName').textContent = estudiante.nombre;
+            document.getElementById('studentGrade').textContent = estudiante.grado;
+            document.getElementById('studentScore').textContent = estudiante.puntaje;
+            document.getElementById('studentActivities').textContent = estudiante.actividades;
+            
+            // Actualizar cada 2 segundos
+            setInterval(function() {
+                actualizarInfoEstudiante();
+                actualizarEstadoTarjetas();
+            }, 2000);
+
+            actualizarEstadoTarjetas();
+        });
+
+        function actualizarEstadoTarjetas() {
+            try {
+                const est = obtenerEstudiante();
+                const tarjetas = document.querySelectorAll('.grid-index .card');
+                const completadas = est.paginas || {};
+                const enviado = est.resultadoEnviado;
+
+                tarjetas.forEach(card => {
+                    const href = card.getAttribute('href') || '';
+                    const match = href.match(/page(\d+)\.html$/);
+                    card.classList.remove('card-completado', 'card-bloqueado');
+                    card.removeAttribute('data-status');
+                    card.removeAttribute('title');
+
+                    if (!match) return;
+                    const pageKey = 'page' + match[1];
+
+                    if (enviado) {
+                        card.classList.add('card-bloqueado');
+                        card.setAttribute('data-status', 'Envío hecho');
+                        card.setAttribute('title', 'Resultados enviados. No puedes ingresar a este módulo.');
+                        return;
+                    }
+
+                    if (Object.prototype.hasOwnProperty.call(completadas, pageKey)) {
+                        card.classList.add('card-completado');
+                        card.setAttribute('data-status', 'Terminado');
+                        card.setAttribute('title', 'Módulo completado. No puedes ingresar a este módulo.');
+                    }
+                });
+            } catch(e) {
+                console.error('Error actualizando estado de tarjetas:', e);
+            }
+        }
+
+        function confirmarLogout() {
+            if (confirm('¿Deseas cambiar de estudiante? Se perderá el progreso actual.')) {
+                limpiarDatos();
+                window.location.href = 'registro.html';
+            }
+        }
+
+        function irAFinalEnviarTodo() {
+            if (!existeEstudiante()) {
+                alert('No hay estudiante registrado. Regresa a la pantalla de registro.');
+                return;
+            }
+            localStorage.setItem('enviarTodoAlFinal', 'true');
+            window.location.href = 'final.html';
+        }
+    </script>
+</body>
+</html>
+

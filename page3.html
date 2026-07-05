@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>José Olaya — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>José Olaya</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-azul">
+            <h2 class="titulo-heroe">José Olaya - Héroe Anónimo</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/l09nrDDrKJg?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-olaya">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Cuál era el modesto pero vital oficio de José Olaya Balandra?</p>
+                    <label><input type="radio" name="olaya-p1" value="a"> Sastre de la corte</label>
+                    <label><input type="radio" name="olaya-p1" value="b"> Pescador artesanal</label>
+                    <label><input type="radio" name="olaya-p1" value="c"> Carpintero de ribera</label>
+                </div>
+                <div class="pregunta"><p>2. ¿De qué villa costera era oriundo José Olaya?</p>
+                    <label><input type="radio" name="olaya-p2" value="a"> Miraflores</label>
+                    <label><input type="radio" name="olaya-p2" value="b"> Chorrillos</label>
+                    <label><input type="radio" name="olaya-p2" value="c"> Ancón</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué tarea secreta cumplía Olaya a favor de la causa patriota?</p>
+                    <label><input type="radio" name="olaya-p3" value="a"> Transportar municiones en carreta</label>
+                    <label><input type="radio" name="olaya-p3" value="b"> Llevar correspondencia nadando entre Callao y Lima</label>
+                    <label><input type="radio" name="olaya-p3" value="c"> Espiar en los palacios virreinales</label>
+                </div>
+                <div class="pregunta"><p>4. ¿A qué causa entregó su vida?</p>
+                    <label><input type="radio" name="olaya-p4" value="a"> Sumisión ante la Corona Española</label>
+                    <label><input type="radio" name="olaya-p4" value="b"> Causa Independentista y Republicana del Perú</label>
+                    <label><input type="radio" name="olaya-p4" value="c"> Beneficio de flotas británicas</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué frase dijo antes de ser fusilado?</p>
+                    <label><input type="radio" name="olaya-p5" value="a"> "¡Tengo deberes sagrados..."</label>
+                    <label><input type="radio" name="olaya-p5" value="b"> "¡Si mil vidas tuviera, dichoso las daría por mi patria!"</label>
+                    <label><input type="radio" name="olaya-p5" value="c"> "¡Viva el Rey y la patria española!"</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Dónde fue capturado?</p>
+                    <label><input type="radio" name="olaya-p6" value="a"> En la pampa de Amancaes</label>
+                    <label><input type="radio" name="olaya-p6" value="b"> Cerca de la Plaza Mayor de Lima</label>
+                    <label><input type="radio" name="olaya-p6" value="c"> En los acantilados de la Costa Verde</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué táctica se usó para obligarlo a confesar?</p>
+                    <label><input type="radio" name="olaya-p7" value="a"> Ofrecer flota moderna</label>
+                    <label><input type="radio" name="olaya-p7" value="b"> Brutales torturas y azotes</label>
+                    <label><input type="radio" name="olaya-p7" value="c"> Destierro a una isla</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué hizo con los mensajes antes de ser atrapado?</p>
+                    <label><input type="radio" name="olaya-p8" value="a"> Los entregó a un guardia</label>
+                    <label><input type="radio" name="olaya-p8" value="b"> Se deshizo de las cartas para no comprometer a nadie</label>
+                    <label><input type="radio" name="olaya-p8" value="c"> Las escondió en el sombrero del general español</label>
+                </div>
+                <div class="pregunta"><p>9. ¿En qué año se consumó su sacrificio?</p>
+                    <label><input type="radio" name="olaya-p9" value="a"> 1821</label>
+                    <label><input type="radio" name="olaya-p9" value="b"> 1823</label>
+                    <label><input type="radio" name="olaya-p9" value="c"> 1879</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Qué valor representa su historia?</p>
+                    <label><input type="radio" name="olaya-p10" value="a"> Lealtad, discreción y heroísmo del ciudadano común</label>
+                    <label><input type="radio" name="olaya-p10" value="b"> Astucia para generar riquezas</label>
+                    <label><input type="radio" name="olaya-p10" value="c"> Indiferencia ante la sociedad</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-olaya', ['b','b','b','b','b','b','b','b','b','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page2.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page4.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

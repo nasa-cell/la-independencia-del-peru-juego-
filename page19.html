@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>El Combate de Angamos — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>El Combate de Angamos</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-morado">
+            <h2 class="titulo-heroe">El Combate de Angamos</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/W9OHh7zFDGU?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-angamos">
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿Qué fecha conmemora el Combate de Angamos?</p>
+                    <label><input type="radio" name="angamos-p1" value="a"> 7 de junio</label>
+                    <label><input type="radio" name="angamos-p1" value="b"> 8 de octubre de 1879</label>
+                    <label><input type="radio" name="angamos-p1" value="c"> 9 de diciembre</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Dónde fue el combate?</p>
+                    <label><input type="radio" name="angamos-p2" value="a"> Cabo de Angamos</label>
+                    <label><input type="radio" name="angamos-p2" value="b"> Punta de Callao</label>
+                    <label><input type="radio" name="angamos-p2" value="c"> Bahía de Paracas</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Quién era el héroe del Huáscar?</p>
+                    <label><input type="radio" name="angamos-p3" value="a"> Miguel Grau</label>
+                    <label><input type="radio" name="angamos-p3" value="b"> Francisco Bolognesi</label>
+                    <label><input type="radio" name="angamos-p3" value="c"> Alfonso Ugarte</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué campaña precedió al combate?</p>
+                    <label><input type="radio" name="angamos-p4" value="a"> Expedición del Norte</label>
+                    <label><input type="radio" name="angamos-p4" value="b"> Correrías del Huáscar</label>
+                    <label><input type="radio" name="angamos-p4" value="c"> Bloqueo del Callao</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué ocurrió en el Huáscar?</p>
+                    <label><input type="radio" name="angamos-p5" value="a"> Se hundió completamente</label>
+                    <label><input type="radio" name="angamos-p5" value="b"> Fue capturado</label>
+                    <label><input type="radio" name="angamos-p5" value="c"> Fue desmantelado</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Quiénes asumieron el mando luego?</p>
+                    <label><input type="radio" name="angamos-p6" value="a"> Oficiales extranjeros</label>
+                    <label><input type="radio" name="angamos-p6" value="b"> Elías Aguirre, Melitón Carvajal y Diego Ferré</label>
+                    <label><input type="radio" name="angamos-p6" value="c"> Ninguno</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué orden dieron para evitar captura?</p>
+                    <label><input type="radio" name="angamos-p7" value="a"> Virar y encallar</label>
+                    <label><input type="radio" name="angamos-p7" value="b"> Abrir las válvulas del fondo</label>
+                    <label><input type="radio" name="angamos-p7" value="c"> Rendir la nave</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Por qué era superior el enemigo?</p>
+                    <label><input type="radio" name="angamos-p8" value="a"> Naves de madera</label>
+                    <label><input type="radio" name="angamos-p8" value="b"> Fragatas blindadas modernas</label>
+                    <label><input type="radio" name="angamos-p8" value="c"> Motores solares</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Qué destino tuvo el Huáscar?</p>
+                    <label><input type="radio" name="angamos-p9" value="a"> Hundido en el mar</label>
+                    <label><input type="radio" name="angamos-p9" value="b"> Capturado intacto</label>
+                    <label><input type="radio" name="angamos-p9" value="c"> Vendido como chatarra</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Por qué es hermosa su inmolación?</p>
+                    <label><input type="radio" name="angamos-p10" value="a"> Honor por encima de la inferioridad material</label>
+                    <label><input type="radio" name="angamos-p10" value="b"> Destrucción de la flota rival</label>
+                    <label><input type="radio" name="angamos-p10" value="c"> Armisticio comercial</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-angamos', ['b','a','a','b','b','b','b','b','b','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page18.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page20.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

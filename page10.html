@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ramón Castilla — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ramón Castilla</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-cafe">
+            <h2 class="titulo-heroe">Ramón Castilla - Abolidor de la Esclavitud</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/PzKIE4OofBY?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-castilla">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En cuántos períodos presidió Ramón Castilla?</p>
+                    <label><input type="radio" name="castilla-p1" value="a"> Solo una vez</label>
+                    <label><input type="radio" name="castilla-p1" value="b"> Dos períodos</label>
+                    <label><input type="radio" name="castilla-p1" value="c"> Ninguna</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Qué medida social decretó en 1854?</p>
+                    <label><input type="radio" name="castilla-p2" value="a"> Abolición de la esclavitud</label>
+                    <label><input type="radio" name="castilla-p2" value="b"> Incremento de impuestos</label>
+                    <label><input type="radio" name="castilla-p2" value="c"> Traslado de esclavos a la selva</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué impuesto eliminó?</p>
+                    <label><input type="radio" name="castilla-p3" value="a"> Tributo indígena</label>
+                    <label><input type="radio" name="castilla-p3" value="b"> Impuesto al comercio</label>
+                    <label><input type="radio" name="castilla-p3" value="c"> Impuesto a la exportación</label>
+                </div>
+                <div class="pregunta"><p>4. ¿Qué recurso generó enormes rentas?</p>
+                    <label><input type="radio" name="castilla-p4" value="a"> Guano de las islas</label>
+                    <label><input type="radio" name="castilla-p4" value="b"> Salitre</label>
+                    <label><input type="radio" name="castilla-p4" value="c"> Caucho</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué ferrocarril inauguró?</p>
+                    <label><input type="radio" name="castilla-p5" value="a"> Lima - Callao</label>
+                    <label><input type="radio" name="castilla-p5" value="b"> Tranvía de Trujillo</label>
+                    <label><input type="radio" name="castilla-p5" value="c"> Ferrovía central</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Qué medio de comunicación introdujo?</p>
+                    <label><input type="radio" name="castilla-p6" value="a"> Correo aéreo</label>
+                    <label><input type="radio" name="castilla-p6" value="b"> Telégrafo eléctrico</label>
+                    <label><input type="radio" name="castilla-p6" value="c"> Mensajería ecuestre</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Cómo saneó las finanzas?</p>
+                    <label><input type="radio" name="castilla-p7" value="a"> Presupuesto nacional y pago de deuda</label>
+                    <label><input type="radio" name="castilla-p7" value="b"> Moneda sin valor</label>
+                    <label><input type="radio" name="castilla-p7" value="c"> Clausurar aduana</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué iluminación moderna introdujo?</p>
+                    <label><input type="radio" name="castilla-p8" value="a"> Alumbrado eléctrico</label>
+                    <label><input type="radio" name="castilla-p8" value="b"> Alumbrado público a gas</label>
+                    <label><input type="radio" name="castilla-p8" value="c"> Lámparas de aceite</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Dónde nació Castilla?</p>
+                    <label><input type="radio" name="castilla-p9" value="a"> Tarapacá</label>
+                    <label><input type="radio" name="castilla-p9" value="b"> Tacna</label>
+                    <label><input type="radio" name="castilla-p9" value="c"> Puno</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Cómo lo consagra la historia?</p>
+                    <label><input type="radio" name="castilla-p10" value="a"> Gran Organizador de la República</label>
+                    <label><input type="radio" name="castilla-p10" value="b"> Conquistador de desiertos</label>
+                    <label><input type="radio" name="castilla-p10" value="c"> Protector del comercio colonial</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-castilla', ['b','a','a','c','a','b','a','b','a','a'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page9.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page11.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

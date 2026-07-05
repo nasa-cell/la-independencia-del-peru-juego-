@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Simón Bolívar — Hatun Aventuras Heroicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Simón Bolívar</h1>
+        <p><a href="index.html">← Volver al índice</a></p>
+        <div class="progress-widget" id="progressWidget" style="display:none;">
+            <strong id="progName">Estudiante</strong> | 🎖️ <span id="progScore">0</span> pts | ✅ <span id="progActivities">0</span>/20
+        </div>
+    </header>
+    <main class="container">
+        <section class="seccion-heroe seccion-morado">
+            <h2 class="titulo-heroe">Simón Bolívar - El Libertador</h2>
+            <div class="contenido-video">
+                <iframe src="https://www.youtube.com/embed/04U6GljIEP8?enablejsapi=1" allowfullscreen></iframe>
+            </div>
+            <div class="cuestionario" id="q-bolivar">
+                <p class="instrucciones-trivia">Primero mira el video. Luego responde las preguntas abajo:</p>
+                                        <div class="grid-preguntas">
+                <div class="pregunta"><p>1. ¿En qué país nació Simón Bolívar?</p>
+                    <label><input type="radio" name="bolivar-p1" value="a"> Colombia</label>
+                    <label><input type="radio" name="bolivar-p1" value="b"> Venezuela</label>
+                    <label><input type="radio" name="bolivar-p1" value="c"> Ecuador</label>
+                </div>
+                <div class="pregunta"><p>2. ¿Por qué se le llama El Libertador?</p>
+                    <label><input type="radio" name="bolivar-p2" value="a"> Liberar comercio</label>
+                    <label><input type="radio" name="bolivar-p2" value="b"> Liderar campañas que emanciparon seis naciones</label>
+                    <label><input type="radio" name="bolivar-p2" value="c"> Escribir constituciones europeas</label>
+                </div>
+                <div class="pregunta"><p>3. ¿Qué designación le dio el Congreso peruano en 1824?</p>
+                    <label><input type="radio" name="bolivar-p3" value="a"> Protector Adjunto</label>
+                    <label><input type="radio" name="bolivar-p3" value="b"> Dictador del Perú</label>
+                    <label><input type="radio" name="bolivar-p3" value="c"> Rey de los Andes</label>
+                </div>
+                <div class="pregunta"><p>4. ¿A qué corriente pertenecía su fuerza militar?</p>
+                    <label><input type="radio" name="bolivar-p4" value="a"> Corriente Libertadora del Sur</label>
+                    <label><input type="radio" name="bolivar-p4" value="b"> Corriente Libertadora del Norte</label>
+                    <label><input type="radio" name="bolivar-p4" value="c"> Expedición Integradora del Centro</label>
+                </div>
+                <div class="pregunta"><p>5. ¿Qué batallas de 1824 terminaron con el dominio español?</p>
+                    <label><input type="radio" name="bolivar-p5" value="a"> San Juan y Miraflores</label>
+                    <label><input type="radio" name="bolivar-p5" value="b"> Junín y Ayacucho</label>
+                    <label><input type="radio" name="bolivar-p5" value="c"> Iquique y Angamos</label>
+                </div>
+                <div class="pregunta"><p>6. ¿Cuál era su proyecto geopolítico?</p>
+                    <label><input type="radio" name="bolivar-p6" value="a"> Federación de repúblicas</label>
+                    <label><input type="radio" name="bolivar-p6" value="b"> Fraccionamiento en pequeños estados</label>
+                    <label><input type="radio" name="bolivar-p6" value="c"> Sometimiento a Inglaterra</label>
+                </div>
+                <div class="pregunta"><p>7. ¿Qué nación se nombró en homenaje a Bolívar?</p>
+                    <label><input type="radio" name="bolivar-p7" value="a"> Ecuador</label>
+                    <label><input type="radio" name="bolivar-p7" value="b"> Bolivia</label>
+                    <label><input type="radio" name="bolivar-p7" value="c"> Colombia</label>
+                </div>
+                <div class="pregunta"><p>8. ¿Qué batalla de caballería dirigió en agosto de 1824?</p>
+                    <label><input type="radio" name="bolivar-p8" value="a"> Tarapacá</label>
+                    <label><input type="radio" name="bolivar-p8" value="b"> Junín</label>
+                    <label><input type="radio" name="bolivar-p8" value="c"> Arica</label>
+                </div>
+                <div class="pregunta"><p>9. ¿Quién fue su general más leal?</p>
+                    <label><input type="radio" name="bolivar-p9" value="a"> Antonio José de Sucre</label>
+                    <label><input type="radio" name="bolivar-p9" value="b"> Andrés Cáceres</label>
+                    <label><input type="radio" name="bolivar-p9" value="c"> Agustín Gamarra</label>
+                </div>
+                <div class="pregunta"><p>10. ¿Dónde habitó Bolívar en Lima?</p>
+                    <label><input type="radio" name="bolivar-p10" value="a"> Quinta de los Libertadores</label>
+                    <label><input type="radio" name="bolivar-p10" value="b"> Catacumbas de San Francisco</label>
+                    <label><input type="radio" name="bolivar-p10" value="c"> Real Felipe del Callao</label>
+                </div>
+            </div>
+                <button class="btn-comprobar" onclick="validarTrivia('q-bolivar', ['b','b','b','b','b','a','b','b','a','b'])">Comprobar Respuestas</button>
+                <div class="resultado"></div>
+            </div>
+        </section>
+                                <nav class="nav-paginacion">
+            <a href="#" onclick="verificarRetroceso('page5.html', event)" class="btn-comprobar">← Anterior</a>
+            <a href="index.html" class="btn-comprobar">Índice</a>
+            <a href="page7.html" class="btn-comprobar">Siguiente →</a>
+        </nav>
+    </main>
+    <script src="registro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
